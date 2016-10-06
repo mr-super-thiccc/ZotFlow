@@ -1,4 +1,5 @@
-To have these files work, you need to used the BeautifulSoup API for Python (which is used for webscraping), the Cytoscape.JS API (which is used to render the DAG), the cytoscape-dagre layout for Cytoscape.js (which is used to layout the nodes in a coherent way).
+To have these files work, you need to use the BeautifulSoup API for Python (which is used for webscraping), the Cytoscape.JS API (which is used to render the DAG), and the cytoscape-dagre layout for Cytoscape.js (which is used to layout the nodes in a coherent way), and jQuery (we're using google's CDN).
+jQuery is already included in the first two files, button_test and dagre_course_graph.
 
 http://js.cytoscape.org/
 This is the link for the cytoscape API.
