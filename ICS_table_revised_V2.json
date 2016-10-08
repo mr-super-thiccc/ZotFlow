@@ -1,0 +1,93 @@
+{
+ "Freshman_Fall": [
+  {
+   "selection2": "I&C SCI 31",
+   "selection3": "MATH 2A",
+   "selection4": "WRITING 39A",
+   "selection5": "I&C SCI 90"
+  }
+ ],
+ "Freshman_Winter": [
+  {
+   "selection7": "I&C SCI 32",
+   "selection8": "MATH 2B",
+   "selection9": "WRITING 39B",
+   "selection10": "General Education III"
+  }
+ ],
+ "Freshman_Spring": [
+  {
+   "selection12": "I&C SCI 33",
+   "selection13": "IN4MATX 43",
+   "selection14": "I&C SCI 6B",
+   "selection15": "WRITING 39C"
+  }
+ ],
+ "Sophomore_Fall": [
+  {
+   "selection1": "I&C SCI 51",
+   "selection6": "I&C SCI 6D",
+   "selection16": "I&C SCI 45C"
+  }
+ ],
+ "Sophomore_Winter": [
+  {
+   "selection18": "I&C SCI 46",
+   "selection19": "I&C SCI 53",
+   "selection20": "I&C SCI 53L",
+   "selection21": "I&C SCI 6N"
+  }
+ ],
+ "Sophomore_Spring": [
+  {
+   "selection22": "Computer Science Spec./Elective",
+   "selection23": "STATS 67",
+   "selection24": "General Education III"
+  }
+ ],
+ "Junior_Fall": [
+  {
+   "selection25": "COMPSCI 161",
+   "selection26": "Science Elective",
+   "selection27": "General Education III",
+   "selection28": "General Education VII"
+  }
+ ],
+ "Junior_Winter": [
+  {
+   "selection29": "Computer Science Spec./Elective",
+   "selection30": "Computer Science Spec./Elective",
+   "selection31": "I&C SCI 139W",
+   "selection32": "General Education VIII"
+  }
+ ],
+ "Junior_Spring": [
+  {
+   "selection33": "Computer Science Spec./Elective",
+   "selection34": "Computer Science Spec./Elective",
+   "selection35": "Science Elective",
+   "selection36": "General Education VI"
+  }
+ ],
+ "Senior_Fall": [
+  {
+   "selection37": "Computer Science Spec./Elective",
+   "selection38": "Computer Science Spec./Elective",
+   "selection39": "General Education IV"
+  }
+ ],
+ "Senior_Winter": [
+  {
+   "selection40": "Computer Science Spec./Elective",
+   "selection41": "Computer Science Spec./Elective",
+   "selection42": "General Education IV"
+  }
+ ],
+ "Senior_Spring": [
+  {
+   "selection43": "Computer Science Spec./Elective",
+   "selection44": "Computer Science Spec./Elective",
+   "selection45": "General Education IV"
+  }
+ ]
+}
