@@ -1,0 +1,273 @@
+<!DOCTYPE>
+
+<html>
+
+	<head>
+	
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+		
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
+
+
+
+		<script src="https://cdn.rawgit.com/cpettitt/dagre/v0.7.4/dist/dagre.js"></script>
+		<script src="cytoscape-dagre\cytoscape-dagre.js"></script>
+		<!--change this to whatever directory you have this in-->
+		
+		
+		<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="layout_file.css">
+
+		
+		<title>ZotFlow</title>
+
+		<script>
+			$(function()
+			{
+
+				var cy = window.cy = cytoscape(
+				{
+					container: document.getElementById('cy'),
+					boxSelectionEnabled: false,
+					autounselectify: true,
+					layout:
+						{
+							name: 'dagre',
+							animate: true,
+							animationDuration: 1550,
+							rankDir: "TB",
+							avoidOverlap: true,
+							minLen: function(edge){return .5;},
+							edgeWeight: function(edge){return 1;}
+						},
+					style: [ // the stylesheet for the graph
+							{
+								selector: 'node',
+								style: 
+									{
+										'background-color': "#FFF",
+										'label': 'data(id)'
+									}
+							},
+							{
+								selector: 'edge',
+								style: 
+									{
+										'width': 8,
+										'line-color': '#FFF',
+										'target-arrow-color': '#FFF',
+										'target-arrow-shape': 'triangle',
+										'curve-style': 'unbundled-bezier',
+										'control-point-distances': 0,
+										'control-point-weights': 0.1	
+									}
+							},
+						],
+					elements: 
+						{ // list of graph elements to start with
+							nodes: 
+								[
+									{
+										data: { id: "ICS 139W"}
+									},
+									{
+										data: { id: 'ICS 31' }
+									},
+									{
+										data: { id: "ICS 32"}
+									},
+									{
+										data: { id: "ICS 33"}
+									},
+									{
+										data: { id: "ICS 45C"}
+									},
+									{
+										data: { id: "ICS 46"}
+									},
+									{ 
+										data: { id: 'ICS 6B' }
+									},
+									{
+										data: { id: 'ICS 6D' }
+									},
+									{
+										data: { id: "Math 2A"}
+									},
+									{
+										data: { id: "ICS 51"}
+									},
+									{
+										data: { id: "ICS 53"}
+									},
+									{
+										data: { id: "ICS 53-L"}
+									},
+									{
+										data: { id: "CS 161"}
+									},
+									{
+										data: { id: "Math 2B"}
+									},
+									{
+										data: { id: "Wrt 39A"}
+									},
+									{
+										data: { id: "Wrt 39B"}
+									},
+									{
+										data: { id: "Wrt 39C"}
+									},
+									{
+										data: { id: "ICS 6N"}
+									},
+									{
+										data: { id: "ICS 90"}
+									},
+									{
+										data: { id: "STATS 67"}
+									},
+								],
+							edges: 
+								[
+									{
+										data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
+									},
+									{
+										data: { id: "link2", source: "ICS 32", target: "ICS 33"}
+									},
+									{
+										data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
+									},
+									{
+										data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
+									},
+									{
+										data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
+									},
+									{
+										data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
+									},
+									{
+										data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
+									},
+									{
+										data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
+									},
+									{
+										data: { id: "link9", source: "ICS 6D", target: "CS 161"}
+									},
+									{
+										data: { id: "link10", source: "Math 2A", target: "Math 2B"}
+									},
+									{
+										data: { id: "link11", source: "Math 2B", target: "CS 161"}
+									},
+									{
+										data: { id: "link12", source: "ICS 51", target: "ICS 53"}
+									},
+									{
+										data: { id: "link13", source: "ICS 51", target: "ICS 53-L"}
+									},
+									{
+										data: { id: "link14", source: "Wrt 39A", target: "Wrt 39B"}
+									},
+									{
+										data: { id: "link15", source: "Wrt 39B", target: "Wrt 39C"}
+									},
+									{
+										data: { id: "link16", source: "Wrt 39C", target: "ICS 139W"}
+									}
+								],					 
+						},
+				});
+			});//closes the function tag
+			
+			//corequisite courses are going to have to be designated by the same color
+			//scrape websoc to see which classes are offered every quarter
+			
+			//how are we going to handle general education requirements?
+			//render GE nodes
+			
+			//look into particular school requirements for a given major
+			
+			
+			
+			//there's a general ed requirement, a school requirement, and a major requirement section for webreg
+			
+			
+			
+			
+			
+			//degreeworks has a list of all of the courses that are required for a given major
+			//degreeworks is a bit more structured than the sample schedule and courses catalog
+			//build a set of classes using classes
+			
+			//
+					
+			
+		</script>
+
+	
+	</head>
+
+		
+	
+	<body>
+		<script>
+			function myFunction()
+			{
+				document.getElementById("myDropdown").classList.toggle("show");
+			}
+			//shows the list inside of the button if it is clicked
+
+			// Close the dropdown menu if the user clicks outside of it
+			window.onclick = function(event)
+			{
+			  if (!event.target.matches('.dropbtn')) 
+				  {
+
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++)
+						{
+						  var openDropdown = dropdowns[i];
+						  if (openDropdown.classList.contains('show')) 
+							  {
+								openDropdown.classList.remove('show');
+							  }
+						}
+				  }
+			}
+		
+		</script>
+		<!--this script deals with querying the data the user wants to diplay-->
+		<div id="jumbotron">ZOTFLOW</div>
+		
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">Select Major</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="#">Business Information Management</a>
+				<a href="#">Computer Game Science</a>
+				<a href="#">Computer Science</a>
+				<a href="#">Computer Science and Engineering</a>
+				<a href="#">Data Science</a>
+				<a href="#">Informatics</a>
+				<a href="#">Information and Computer Science</a>
+				<a href="#">Software Engineering</a>
+			</div>
+		</div>
+		
+		
+		<div id="cy"></div>
+		<!--We have to figure out how to place this div so that it's below the button but doesn't obstruct it-->
+		<p id="info">Course offerings may be moved due to unforeseen circumstances. It is strongly recommended that students meet with an academic advisor to create an academic plan tailored to meet their specific areas of interest.</p>
+	</body>
+
+</html>
