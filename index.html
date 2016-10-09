@@ -68,9 +68,21 @@
 										'control-point-weights': 0.1	
 									}
 							},
+							{
+								selector: ".coreq",
+								style:
+									{
+										"background-color": "#ffff00"
+									}
+							}
 						],
 					elements: 
 						{ // list of graph elements to start with
+							//nodes: cs_algorithms
+							//edges: cs_algorithms_edges
+							
+							//nodes: cs_info
+							//edges: cs_info_edges
 							nodes: 
 								[
 									{
@@ -104,10 +116,8 @@
 										data: { id: "ICS 51"}
 									},
 									{
-										data: { id: "ICS 53"}
-									},
-									{
-										data: { id: "ICS 53-L"}
+										data: { id: "ICS 53/53-L"},
+										classes: "coreq"
 									},
 									{
 										data: { id: "CS 161"}
@@ -170,10 +180,7 @@
 										data: { id: "link11", source: "Math 2B", target: "CS 161"}
 									},
 									{
-										data: { id: "link12", source: "ICS 51", target: "ICS 53"}
-									},
-									{
-										data: { id: "link13", source: "ICS 51", target: "ICS 53-L"}
+										data: { id: "link12", source: "ICS 51", target: "ICS 53/53-L"}
 									},
 									{
 										data: { id: "link14", source: "Wrt 39A", target: "Wrt 39B"}
@@ -186,6 +193,10 @@
 									}
 								],					 
 						},
+				
+					minZoom: .5,
+					maxZoom: 2.5,
+					autolock: true
 				});
 			});//closes the function tag
 			
