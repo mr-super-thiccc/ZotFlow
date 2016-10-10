@@ -25,201 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="layout_file.css">
 
 		
-		<title>ZotFlow</title>
-
-		
-		<script>
-			$(function()
-			{
-
-				var cy = window.cy = cytoscape(
-				{
-					container: document.getElementById('cy'),
-					boxSelectionEnabled: false,
-					autounselectify: true,
-					layout:
-						{
-							name: 'dagre',
-							animate: true,
-							animationDuration: 1550,
-							rankDir: "TB",
-							avoidOverlap: true,
-							minLen: function(edge){return .5;},
-							edgeWeight: function(edge){return 1;}
-						},
-					style: [ // the stylesheet for the graph
-							{
-								selector: 'node',
-								style: 
-									{
-										'background-color': "#FFF",
-										'label': 'data(id)'
-									}
-							},
-							{
-								selector: 'edge',
-								style: 
-									{
-										'width': 8,
-										'line-color': '#FFF',
-										'target-arrow-color': '#FFF',
-										'target-arrow-shape': 'triangle',
-										'curve-style': 'unbundled-bezier',
-										'control-point-distances': 0,
-										'control-point-weights': 0.1	
-									}
-							}
-						],
-					elements: 
-						{ // list of graph elements to start with
-							//nodes: cs_algorithms
-							//edges: cs_algorithms_edges
-							
-							//nodes: cs_info
-							//edges: cs_info_edges
-							nodes: 
-								[
-									{
-										data: { id: "ICS 139W"}
-									},
-									{
-										data: { id: 'ICS 31' }
-									},
-									{
-										data: { id: "ICS 32"}
-									},
-									{
-										data: { id: "ICS 33"}
-									},
-									{
-										data: { id: "ICS 45C"}
-									},
-									{
-										data: { id: "ICS 46"}
-									},
-									{ 
-										data: { id: 'ICS 6B' }
-									},
-									{
-										data: { id: 'ICS 6D' }
-									},
-									{
-										data: { id: "Math 2A"}
-									},
-									{
-										data: { id: "ICS 51"}
-									},
-									{
-										data: { id: "ICS 53/53-L"},
-										classes: "coreq"
-									},
-									{
-										data: { id: "CS 161"}
-									},
-									{
-										data: { id: "Math 2B"}
-									},
-									{
-										data: { id: "Wrt 39A"}
-									},
-									{
-										data: { id: "Wrt 39B"}
-									},
-									{
-										data: { id: "Wrt 39C"}
-									},
-									{
-										data: { id: "ICS 6N"}
-									},
-									{
-										data: { id: "ICS 90"}
-									},
-									{
-										data: { id: "STATS 67"}
-									},
-								],
-							edges: 
-								[
-									{
-										data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
-									},
-									{
-										data: { id: "link2", source: "ICS 32", target: "ICS 33"}
-									},
-									{
-										data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
-									},
-									{
-										data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
-									},
-									{
-										data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
-									},
-									{
-										data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
-									},
-									{
-										data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
-									},
-									{
-										data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
-									},
-									{
-										data: { id: "link9", source: "ICS 6D", target: "CS 161"}
-									},
-									{
-										data: { id: "link10", source: "Math 2A", target: "Math 2B"}
-									},
-									{
-										data: { id: "link11", source: "Math 2B", target: "CS 161"}
-									},
-									{
-										data: { id: "link12", source: "ICS 51", target: "ICS 53/53-L"}
-									},
-									{
-										data: { id: "link14", source: "Wrt 39A", target: "Wrt 39B"}
-									},
-									{
-										data: { id: "link15", source: "Wrt 39B", target: "Wrt 39C"}
-									},
-									{
-										data: { id: "link16", source: "Wrt 39C", target: "ICS 139W"}
-									}
-								],					 
-						},
-				
-					minZoom: .5,
-					maxZoom: 2.5,
-					autolock: true
-				});
-			});//closes the function tag
-			
-			//corequisite courses are going to have to be designated by the same color
-			//scrape websoc to see which classes are offered every quarter
-			
-			//how are we going to handle general education requirements?
-			//render GE nodes
-			
-			//look into particular school requirements for a given major
-			
-			
-			
-			//there's a general ed requirement, a school requirement, and a major requirement section for webreg
-			
-			
-			
-			
-			
-			//degreeworks has a list of all of the courses that are required for a given major
-			//degreeworks is a bit more structured than the sample schedule and courses catalog
-			//build a set of classes using classes
-			
-			//
-					
-			
-		</script>
-	
-
+		<title>ZotFlow</title>	
 	
 	</head>
 
@@ -254,6 +60,381 @@
 		
 		</script>
 		<!--this script deals with querying the data the user wants to diplay-->
+		<script>
+			$(function()
+			{
+			
+			
+			//These are hardcoded at the moment. Wiil be automated in the future.
+				var bim_nodes = [
+								{
+									data: { id: "ICS 31"}
+								},
+								{
+									data: { id: "ICS 32"}
+								},
+								{
+									data: { id: "ICS 33"}
+								},
+								{
+									data: { id: "CS 122A"}
+								},
+								{
+									data: { id: "ICS 45J"}
+								},
+								{
+									data: { id: "IN4MATX 43"}
+								},
+								{
+									data: { id: "STATS 7"}
+								},
+								{
+									data: { id: "MGMT 30B"}
+								},
+								{
+									data: { id: "MGMT 101"}
+								},
+								{
+									data: { id: "MGMT 102"}
+								},
+								{
+									data: { id: "MGMT 105"}
+								},
+								{
+									data: { id: "MGMT 30A"}
+								},
+								{
+									data: { id: "MGMT 107"}
+								},
+								{
+									data: { id: "MGMT 173"}
+								},
+								{
+									data: { id: "MGMT 178"}
+								},
+								{
+									data: { id: "MGMT 189"}
+								},
+								{
+									data: { id: "CS 121"}
+								},
+								{
+									data: { id: "IN4MATX 113"}
+								},
+								{
+									data: { id: "IN4MATX 143"}
+								},	
+								{
+									data: { id: "STATS 110"}
+								},
+								{
+									data: { id: "MATH 2A"}
+								},
+								{
+									data: { id: "MATH 2B"}
+								},
+								{
+									data: { id: "MGMT 109"}
+								},
+								{
+									data: { id: "MGMT 110"}
+								},
+								{
+									data: { id: "ICS 6B"}
+								},
+								{
+									data: { id: "ICS 6D"}
+								},
+								{
+									data: { id: "ECON 20A"}
+								},
+								{
+									data: { id: "ECON 20B"}
+								},
+								{
+									data: { id: "ICS 6N"}
+								},
+							];
+
+
+var bim_edges = [
+
+				{
+					data: { id: "link1", source: "ICS 31", target: "ICS 32"}
+				},
+				{
+					data: { id: "link2", source: "ICS 31", target: "ICS 32"}
+				},
+				{
+					data: { id: "link3", source: "ICS 32", target: "ICS 33"}
+				},
+				{
+					data: { id: "link4", source: "ICS 32", target: "IN4MATX 43"}
+				},
+				{
+					data: { id: "link5", source: "ICS 33", target: "ICS 45J"}
+				},
+				{
+					data: { id: "link6", source: "ICS 33", target: "CS 122A"}
+				},
+				{
+					data: { id: "link7", source: "ICS 33", target: "IN4MATX 113"}
+				},
+				{
+					data: { id: "link8", source: "ICS 45J", target: "CS 121"}
+				},
+				{
+					data: { id: "link9", source: "STATS 7", target: "STATS 110"}
+				},
+				{
+					data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
+				},
+				{
+					data: { id: "link11", source: "MATH 2B", target: "MGMT 109"}
+				},
+				{
+					data: { id: "link12", source: "MGMT 30A", target: "MGMT 109"}
+				},
+				{
+					data: { id: "link13", source: "ICS 6B", target: "ICS 6D"}
+				},
+				{
+					data: { id: "link14", source: "ECON 20A", target: "ECON 20B"}
+				},
+				{
+					data: { id: "link15", source: "MGMT 30A", target: "MGMT 30B"}
+				},
+				{
+					data: { id: "link16", source: "STATS 7", target: "MGMT 101"}
+				},
+				{
+					data: { id: "link17", source: "MGMT 102", target: "MGMT 110"}
+				},
+				{
+					data: { id: "link18", source: "MGMT 105", target: "MGMT 110"}
+				},
+				{
+					data: { id: "link19", source: "MGMT 109", target: "MGMT 110"}
+				},
+				{
+					data: { id: "link20", source: "MGMT 107", target: "MGMT 173"}
+				},
+				{
+					data: { id: "link21", source: "MGMT 107", target: "MGMT 178"}
+				},
+				{
+					data: { id: "link22", source: "MGMT 101", target: "MGMT 189"}
+				},
+				{
+					data: { id: "link23", source: "IN4MATX 43", target: "IN4MATX 113"}
+				},
+				{
+					data: { id: "link24", source: "IN4MATX 43", target: "IN4MATX 143"}
+				},
+				{
+					data: { id: "link25", source: "ICS 31", target: "IN4MATX 143"}
+				},
+];
+							
+			
+			var cs_lower_div_nodes = [
+									{
+										data: { id: "ICS 139W"}
+									},
+									{
+										data: { id: 'ICS 31' }
+									},
+									{
+										data: { id: "ICS 32"}
+									},
+									{
+										data: { id: "ICS 33"}
+									},
+									{
+										data: { id: "ICS 45C"}
+									},
+									{
+										data: { id: "ICS 46"}
+									},
+									{ 
+										data: { id: 'ICS 6B' }
+									},
+									{
+										data: { id: 'ICS 6D' }
+									},
+									{
+										data: { id: "Math 2A"}
+									},
+									{
+										data: { id: "ICS 51"}
+									},
+									{
+										data: { id: "ICS 53 and ICS 53-L"}
+									},
+									{
+										data: { id: "CS 161"}
+									},
+									{
+										data: { id: "Math 2B"}
+									},
+									{
+										data: { id: "Wrt 39A"}
+									},
+									{
+										data: { id: "Wrt 39B"}
+									},
+									{
+										data: { id: "Wrt 39C"}
+									},
+									{
+										data: { id: "IN4MATX 43"}
+									},
+									{
+										data: { id: "ICS 6N"}
+									},
+									{
+										data: { id: "ICS 90"}
+									},
+									{
+										data: { id: "STATS 67"}
+									},
+								];
+			
+			var cs_lower_div_edges = [
+									{
+										data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
+									},
+									{
+										data: { id: "link2", source: "ICS 32", target: "ICS 33"}
+									},
+									{
+										data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
+									},
+									{
+										data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
+									},
+									{
+										data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
+									},
+									{
+										data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
+									},
+									{
+										data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
+									},
+									{
+										data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
+									},
+									{
+										data: { id: "link9", source: "ICS 6D", target: "CS 161"}
+									},
+									{
+										data: { id: "link10", source: "Math 2A", target: "Math 2B"}
+									},
+									{
+										data: { id: "link11", source: "Math 2B", target: "CS 161"}
+									},
+									{
+										data: { id: "link12", source: "ICS 51", target: "ICS 53 and ICS 53-L"}
+									},
+									{
+										data: { id: "link14", source: "Wrt 39A", target: "Wrt 39B"}
+									},
+									{
+										data: { id: "link15", source: "Wrt 39B", target: "Wrt 39C"}
+									},
+									{
+										data: { id: "link16", source: "Wrt 39C", target: "ICS 139W"}
+									},
+									{				
+										data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
+									},
+								];	
+			
+			
+			
+			
+
+				var cy = window.cy = cytoscape(
+				{
+					container: document.getElementById('cy'),
+					boxSelectionEnabled: false,
+					autounselectify: true,
+					layout:
+						{
+							name: 'dagre',
+							animate: true,
+							animationDuration: 1550,
+							rankDir: "TB",
+							avoidOverlap: true,
+							minLen: function(edge){return .5;},
+							edgeWeight: function(edge){return 1;}
+						},
+					style: [ // the stylesheet for the graph
+							{
+								selector: 'node',
+								style: 
+									{
+										'background-color': "#FFF",
+										'label': 'data(id)',
+										"font-size": ".75em"
+									}
+							},
+							{
+								selector: 'edge',
+								style: 
+									{
+										'width': 6,
+										'line-color': '#FFF',
+										'target-arrow-color': '#FFF',
+										'target-arrow-shape': 'triangle',
+										'curve-style': 'unbundled-bezier',
+										'control-point-distances': 0,
+										'control-point-weights': 0.1	
+									}
+							}
+						],
+					elements: 
+						{ // list of graph elements to start with
+							//nodes: cs_algorithms
+							//edges: cs_algorithms_edges
+							
+							//nodes: cs_info
+							//edges: cs_info_edges
+							nodes: bim_nodes,
+							edges: bim_edges				 
+						},
+				
+					minZoom: .5,
+					maxZoom: 2.5,
+					//autolock: true
+				});
+			});//closes the function tag
+			
+			//corequisite courses are going to have to be designated by the same color
+			//scrape websoc to see which classes are offered every quarter
+			
+			//how are we going to handle general education requirements?
+			//render GE nodes
+			
+			//look into particular school requirements for a given major
+			
+			
+			
+			//there's a general ed requirement, a school requirement, and a major requirement section for webreg
+			
+			
+			
+			
+			
+			//degreeworks has a list of all of the courses that are required for a given major
+			//degreeworks is a bit more structured than the sample schedule and courses catalog
+			//build a set of classes using classes
+			
+			//
+					
+			
+		</script>
 		<div id="jumbotron">ZOTFLOW</div>
 		
 		<div class="dropdown">
