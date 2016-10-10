@@ -44,7 +44,16 @@
 			
 			window.onclick = function(event)
 			{
-				var cgs_lower_div_nodes = [
+				var cgs_nodes = [
+								{
+									data: { id: "Math 2A"}
+								},
+								{
+									data: { id: "Math 2B"}
+								},
+								{
+									data: { id: "STATS 67"}
+								},
 								{
 									data: { id: "ICS 31"}
 								},
@@ -61,28 +70,34 @@
 									data: { id: "ICS 46"}
 								},
 								{
+									data: { id: "ICS 161"}
+								},
+								{
 									data: { id: "ICS 62"}
 								},
 								{
 									data: { id: "ICS 51"}
 								},
 								{
+									data: { id: "ICS 167"}
+								},
+								{
 									data: { id: "IN4MATX 43"}
 								},
 								{
-									data: { id: "Math 2A"}
+									data: { id: "ICS 168"}
 								},
 								{
-									data: { id: "Math 2B"}
+									data: { id: "ICS 169A"}
+								},
+								{
+									data: { id: "ICS 169B"}
 								},
 								{
 									data: { id: "ICS 6B"}
 								},
 								{
 									data: { id: "ICS 6D"}
-								},
-								{
-									data: { id: "STATS 67"}
 								},
 								{
 									data: { id: "ICS 6N"}
@@ -97,7 +112,7 @@
 									data: { id: "FLM&MDA 85A"}
 								},
 							];
-			 var cgs_lower_div_edges = [
+			 var cgs_edges = [
 								{
 									data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
 								},
@@ -139,6 +154,27 @@
 								},
 								{
 									data: { id: "link14", source: "ICS 31", target: "ICS 62"}
+								},
+								{
+									data: { id: "link15", source: "ICS 45C", target: "ICS 161"}
+								},
+								{
+									data: { id: "link16", source: "ICS 161", target: "ICS 162"}
+								},
+								{
+									data: { id: "link17", source: "ICS 51", target: "ICS 167"}
+								},
+								{
+									data: { id: "link18", source: "ICS 167", target: "ICS 168"}
+								},
+								{
+									data: { id: "link19", source: "IN4MATX 43", target: "ICS 168"}
+								},
+								{
+									data: { id: "link20", source: "ICS 168", target: "ICS 169A"}
+								},
+								{
+									data: { id: "link21", source: "ICS 169A", target: "ICS 169B"}
 								},
 							];
 				var bim_nodes = [
@@ -548,8 +584,8 @@
 											],
 										elements: 
 											{ 
-												nodes: cgs_lower_div_nodes,
-												edges: cgs_lower_div_edges	 
+												nodes: cgs_nodes,
+												edges: cgs_edges	 
 											},
 									
 										minZoom: .5,
