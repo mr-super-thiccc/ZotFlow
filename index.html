@@ -44,6 +44,103 @@
 			
 			window.onclick = function(event)
 			{
+				var cgs_lower_div_nodes = [
+								{
+									data: { id: "ICS 31"}
+								},
+								{
+									data: { id: "ICS 32"}
+								},
+								{
+									data: { id: "ICS 33"}
+								},
+								{
+									data: { id: "ICS 45C"}
+								},
+								{
+									data: { id: "ICS 46"}
+								},
+								{
+									data: { id: "ICS 62"}
+								},
+								{
+									data: { id: "ICS 51"}
+								},
+								{
+									data: { id: "IN4MATX 43"}
+								},
+								{
+									data: { id: "Math 2A"}
+								},
+								{
+									data: { id: "Math 2B"}
+								},
+								{
+									data: { id: "ICS 6B"}
+								},
+								{
+									data: { id: "ICS 6D"}
+								},
+								{
+									data: { id: "STATS 67"}
+								},
+								{
+									data: { id: "ICS 6N"}
+								},
+								{
+									data: { id: "ICS 60"}
+								},
+								{
+									data: { id: "ICS 61"}
+								},
+								{
+									data: { id: "FLM&MDA 85A"}
+								},
+							];
+			 var cgs_lower_div_edges = [
+								{
+									data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
+								},
+								{
+									data: { id: "link2", source: "ICS 32", target: "ICS 33"}
+								},
+								{
+									data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
+								},
+								{
+									data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
+								},
+								{
+									data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
+								},
+								{
+									data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
+								},
+								{
+									data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
+								},
+								{
+									data: { id: 'link8', source: 'ICS 6B', target: 'ICS 51'}
+								},
+								{
+									data: { id: 'link9', source: 'ICS 46', target: 'CS 161' }
+								},
+								{
+									data: { id: "link10", source: "ICS 6D", target: "CS 161"}
+								},
+								{
+									data: { id: "link11", source: "Math 2A", target: "Math 2B"}
+								},
+								{				
+									data: { id: "link12", source: "ICS 32", target: "IN4MATX 43"}
+								},
+								{
+									data: { id: "link13", source: "Math 2B", target: "STATS 67"}
+								},
+								{
+									data: { id: "link14", source: "ICS 31", target: "ICS 62"}
+								},
+							];
 				var bim_nodes = [
 								{
 									data: { id: "ICS 31"}
@@ -215,10 +312,40 @@
 							
 			var cs_lower_div_nodes = [
 									{
+										data: { id: "Wrt 39A"}
+									},
+									{
+										data: { id: "Wrt 39B"}
+									},
+									{
+										data: { id: "Wrt 39C"}
+									},
+									{
 										data: { id: "ICS 139W"}
 									},
 									{
+										data: { id: "Math 2A"}
+									},
+									{
+										data: { id: "Math 2B"}
+									},
+									{
+										data: { id: "STATS 67"}
+									},
+									{
 										data: { id: 'ICS 31' }
+									},
+									{ 
+										data: { id: 'ICS 6B' }
+									},
+									{
+										data: { id: 'ICS 6D' }
+									},
+									{
+										data: { id: "ICS 51"}
+									},
+									{
+										data: { id: "ICS 53 and ICS 53-L"}
 									},
 									{
 										data: { id: "ICS 32"}
@@ -232,35 +359,8 @@
 									{
 										data: { id: "ICS 46"}
 									},
-									{ 
-										data: { id: 'ICS 6B' }
-									},
-									{
-										data: { id: 'ICS 6D' }
-									},
-									{
-										data: { id: "Math 2A"}
-									},
-									{
-										data: { id: "ICS 51"}
-									},
-									{
-										data: { id: "ICS 53 and ICS 53-L"}
-									},
 									{
 										data: { id: "CS 161"}
-									},
-									{
-										data: { id: "Math 2B"}
-									},
-									{
-										data: { id: "Wrt 39A"}
-									},
-									{
-										data: { id: "Wrt 39B"}
-									},
-									{
-										data: { id: "Wrt 39C"}
 									},
 									{
 										data: { id: "IN4MATX 43"}
@@ -270,9 +370,6 @@
 									},
 									{
 										data: { id: "ICS 90"}
-									},
-									{
-										data: { id: "STATS 67"}
 									},
 								];
 			
@@ -324,6 +421,9 @@
 									},
 									{				
 										data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
+									},
+									{
+										data: { id: "link18", source: "Math 2B", target: "STATS 67"}
 									},
 								];		
 		
@@ -407,7 +507,55 @@
 							}
 							else if(event.target.matches("#CGS"))
 							{
-								console.log("cgs was selected");
+									var cy = window.cy = cytoscape(
+									{
+										container: document.getElementById('cy'),
+										boxSelectionEnabled: false,
+										autounselectify: true,
+										layout:
+											{
+												name: 'dagre',
+												animate: true,
+												animationDuration: 1550,
+												rankDir: "TB",
+												avoidOverlap: true,
+												minLen: function(edge){return .5;},
+												edgeWeight: function(edge){return 1;}
+											},
+										style: [ // the stylesheet for the graph
+												{
+													selector: 'node',
+													style: 
+														{
+															'background-color': "#FFF",
+															'label': 'data(id)',
+															"font-size": ".75em"
+														}
+												},
+												{
+													selector: 'edge',
+													style: 
+														{
+															'width': 6,
+															'line-color': '#FFF',
+															'target-arrow-color': '#FFF',
+															'target-arrow-shape': 'triangle',
+															'curve-style': 'unbundled-bezier',
+															'control-point-distances': 0,
+															'control-point-weights': 0.1	
+														}
+												}
+											],
+										elements: 
+											{ 
+												nodes: cgs_lower_div_nodes,
+												edges: cgs_lower_div_edges	 
+											},
+									
+										minZoom: .5,
+										maxZoom: 2.5,
+										autolock: true
+									});
 							}
 							else if(event.target.matches("#CS"))
 							{
