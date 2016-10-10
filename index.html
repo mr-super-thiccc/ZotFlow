@@ -40,30 +40,69 @@
 			//shows the list inside of the button if it is clicked
 
 			// Close the dropdown menu if the user clicks outside of it
+			
+			
 			window.onclick = function(event)
 			{
-			  if (!event.target.matches('.dropbtn')) 
-				  {
-
-					var dropdowns = document.getElementsByClassName("dropdown-content");
-					var i;
-					for (i = 0; i < dropdowns.length; i++)
-						{
-						  var openDropdown = dropdowns[i];
-						  if (openDropdown.classList.contains('show')) 
-							  {
-								openDropdown.classList.remove('show');
-							  }
-						}
+				if (!event.target.matches('.dropbtn')) 
+					{
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						var i;
+						for (i = 0; i < dropdowns.length; i++)
+							{
+								var openDropdown = dropdowns[i];
+								if (openDropdown.classList.contains('show')) 
+									{
+										openDropdown.classList.remove('show');
+									}
+							}
 				  }
+				  
+				else if (event.target.matches(".dropbtn"))
+					{
+						var outer = document.getElementsByClassName("dropdown-content");
+						container = outer[0];
+						container.onclick = function(event)
+						{
+							if(event.target.matches("#BIM"))
+							{
+								console.log("bim was selected");
+							}
+							else if(event.target.matches("#CGS"))
+							{
+								console.log("cgs was selected");
+							}
+							else if(event.target.matches("#CS"))
+							{
+								console.log("cs was selected");
+							}
+							else if(event.target.matches("#CSE"))
+							{
+								console.log("cse was selected");
+							}
+							else if(event.target.matches("#DS"))
+							{
+								console.log("ds was selected");
+							}
+							else if(event.target.matches("#in4mtx"))
+							{
+								console.log("informatics was selected");
+							}
+							else if(event.target.matches("#SE"))
+							{
+								console.log("se was selected");
+							}
+						}
+					}
+					
 			}
 		
 		</script>
 		<!--this script deals with querying the data the user wants to diplay-->
+
 		<script>
 			$(function()
 			{
-			
 			
 			//These are hardcoded at the moment. Wiil be automated in the future.
 				var bim_nodes = [
@@ -158,7 +197,6 @@
 
 
 var bim_edges = [
-
 				{
 					data: { id: "link1", source: "ICS 31", target: "ICS 32"}
 				},
@@ -401,13 +439,13 @@ var bim_edges = [
 							
 							//nodes: cs_info
 							//edges: cs_info_edges
-							nodes: bim_nodes,
-							edges: bim_edges				 
+							nodes: cs_lower_div_nodes,
+							edges: cs_lower_div_edges	 
 						},
 				
 					minZoom: .5,
 					maxZoom: 2.5,
-					//autolock: true
+					autolock: true
 				});
 			});//closes the function tag
 			
@@ -431,23 +469,21 @@ var bim_edges = [
 			//degreeworks is a bit more structured than the sample schedule and courses catalog
 			//build a set of classes using classes
 			
-			//
-					
-			
 		</script>
+		
+		
 		<div id="jumbotron">ZOTFLOW</div>
 		
 		<div class="dropdown">
 			<button onclick="myFunction()" class="dropbtn">Select Major</button>
 			<div id="myDropdown" class="dropdown-content">
-				<a href="#">Business Information Management</a>
-				<a href="#">Computer Game Science</a>
-				<a href="#">Computer Science</a>
-				<a href="#">Computer Science and Engineering</a>
-				<a href="#">Data Science</a>
-				<a href="#">Informatics</a>
-				<a href="#">Information and Computer Science</a>
-				<a href="#">Software Engineering</a>
+				<a id="BIM" href="#">Business Information Management</a>
+				<a id="CGS" href="#">Computer Game Science</a>
+				<a id="CS" href="#">Computer Science</a>
+				<a id="CSE" href="#">Computer Science and Engineering</a>
+				<a id="DS" href="#">Data Science</a>
+				<a id="in4mtx" href="#">Informatics</a>
+				<a id="SE" href="#">Software Engineering</a>
 			</div>
 		</div>
 		
