@@ -12,10 +12,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
 
-
-
 		<script src="https://cdn.rawgit.com/cpettitt/dagre/v0.7.4/dist/dagre.js"></script>
+		<script src="WebCola/cola.js"></script>
+		
 		<script src="cytoscape-dagre\cytoscape-dagre.js"></script>
+		<script src="cytoscape-cola\cytoscape-cola.js"></script>
 		<!--change this to whatever directory you have this in-->
 		
 		
@@ -211,52 +212,8 @@
 								];
 								
 var data_science_nodes = [
-							{
-								data: { id: "WRT 39A"}
-							},
-							{
-								data: { id: "WRT 39B"}
-							},
-							{
-								data: { id: "WRT 39C"}
-							},
-							{
-								data: { id: "ICS 139W"}
-							},
 
-							{
-								data: { id: "ICS 46"}
-							},
-							{
-								data: { id: "ICS 45C"}
-							},
-							{
-								data: { id: "ICS 33"}
-							},
-							{
-								data: { id: "ICS 32"}
-							},
-							{
-								data: { id: "IN4MATX 43"}
-							},
-							{
-								data: { id: 'ICS 31' }
-							},
-							{
-								data: { id: "STATS 68"}
-							},								
-							{
-								data: { id: "ICS 6N"}
-							},						
-
-							{
-								data: { id: "CS 122A"}
-							},
-							
-							
-							
-							
-							
+					
 							{ 
 								data: { id: 'MATH 2A' }
 							},
@@ -277,23 +234,61 @@ var data_science_nodes = [
 							},
 							{
 								data: { id: "STATS 115"}
-							},	
+							},
+								
+							{
+								data: { id: "CS 178"}
+							},
 						
+							{
+								data: { id: "STATS 7"}
+							},
+							{
+								data: { id: "STATS 110"}
+							},
+							{
+								data: { id: "STATS 111"}
+							},		
+							{
+								data: { id: "STATS 112"}
+							},								
+							{
+								data: { id: "ICS 46"}
+							},
+							{
+								data: { id: "ICS 45C"}
+							},
+							{
+								data: { id: "ICS 33"}
+							},
+							{
+								data: { id: "ICS 32"}
+							},
+							{
+								data: { id: "IN4MATX 43"}
+							},
+							{
+								data: { id: 'ICS 31' }
+							},
+							{
+								data: { id: "STATS 68"}
+							},
+							
+								
+							{
+								data: { id: "CS 122A"}
+							},
 							
 							
 							{
 								data: { id: "IN4MATX 143"}
 							},						
-
-
-							//lower div is listed above
-
-
 							
-							
+														
 							{
-								data: { id: "ICS 51"}
-							},
+								data: { id: "ICS 6N"}
+							},	
+	
 
 										
 							
@@ -304,33 +299,37 @@ var data_science_nodes = [
 							{
 								data: { id: 'ICS 6D' }
 							},
+
+							{
+								data: { id: "ICS 51"}
+							},
+	
+
+	
 	
 							{
 								data: { id: "CS 161"}
 							},
 	
-				
-				
-							{
-								data: { id: "CS 178"}
-							},
-							{
-								data: { id: "STATS 7"}
-							},
-							{
-								data: { id: "STATS 110"}
-							},
-							{
-								data: { id: "STATS 111"}
-							},
-							{
-								data: { id: "STATS 112"}
-							},
-						
-							
-	
+
+
+
+
 							
 
+							
+							{
+								data: { id: "WRT 39A"}
+							},
+							{
+								data: { id: "WRT 39B"}
+							},
+							{
+								data: { id: "WRT 39C"}
+							},
+							{
+								data: { id: "ICS 139W"}
+							},							
 							{
 								data: { id: "ELECTIVES"}
 							},
@@ -756,7 +755,7 @@ var data_science_edges = [
 												animationDuration: 1550,
 												rankDir: "TB",
 												avoidOverlap: true,
-												minLen: function(edge){return .5;},
+												minLen: function(edge){return 1;},
 												edgeWeight: function(edge){return 1;}
 											},
 										style: [ // the stylesheet for the graph
@@ -791,7 +790,7 @@ var data_science_edges = [
 									
 										minZoom: .5,
 										maxZoom: 2.5,
-										//autolock: true
+										autolock: true
 									});
 							}
 							else if(event.target.matches("#in4mtx"))
@@ -839,7 +838,7 @@ var data_science_edges = [
 		
 		<div id="cy"></div>
 		<!--We have to figure out how to place this div so that it's below the button but doesn't obstruct it-->
-		<p id="info">By Pablo Figueroa, Kerry Cheng3. Course offerings may be moved due to unforeseen circumstances. It is strongly recommended that students meet with an academic advisor to create an academic plan tailored to meet their specific areas of interest.</p>
+		<p id="info">By Pablo Figueroa Kerry Cheng. Course offerings may be moved due to unforeseen circumstances. It is strongly recommended that students meet with an academic advisor to create an academic plan tailored to meet their specific areas of interest.</p>
 	</body>
 
 </html>
