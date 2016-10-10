@@ -44,67 +44,6 @@
 			
 			window.onclick = function(event)
 			{
-				if (!event.target.matches('.dropbtn')) 
-					{
-						var dropdowns = document.getElementsByClassName("dropdown-content");
-						var i;
-						for (i = 0; i < dropdowns.length; i++)
-							{
-								var openDropdown = dropdowns[i];
-								if (openDropdown.classList.contains('show')) 
-									{
-										openDropdown.classList.remove('show');
-									}
-							}
-				  }
-				  
-				else if (event.target.matches(".dropbtn"))
-					{
-						var outer = document.getElementsByClassName("dropdown-content");
-						container = outer[0];
-						container.onclick = function(event)
-						{
-							if(event.target.matches("#BIM"))
-							{
-								console.log("bim was selected");
-							}
-							else if(event.target.matches("#CGS"))
-							{
-								console.log("cgs was selected");
-							}
-							else if(event.target.matches("#CS"))
-							{
-								console.log("cs was selected");
-							}
-							else if(event.target.matches("#CSE"))
-							{
-								console.log("cse was selected");
-							}
-							else if(event.target.matches("#DS"))
-							{
-								console.log("ds was selected");
-							}
-							else if(event.target.matches("#in4mtx"))
-							{
-								console.log("informatics was selected");
-							}
-							else if(event.target.matches("#SE"))
-							{
-								console.log("se was selected");
-							}
-						}
-					}
-					
-			}
-		
-		</script>
-		<!--this script deals with querying the data the user wants to diplay-->
-
-		<script>
-			$(function()
-			{
-			
-			//These are hardcoded at the moment. Wiil be automated in the future.
 				var bim_nodes = [
 								{
 									data: { id: "ICS 31"}
@@ -196,7 +135,7 @@
 							];
 
 
-var bim_edges = [
+				var bim_edges = [
 				{
 					data: { id: "link1", source: "ICS 31", target: "ICS 32"}
 				},
@@ -274,7 +213,6 @@ var bim_edges = [
 				},
 ];
 							
-			
 			var cs_lower_div_nodes = [
 									{
 										data: { id: "ICS 139W"}
@@ -387,68 +325,168 @@ var bim_edges = [
 									{				
 										data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
 									},
-								];	
+								];		
+		
 			
 			
-			
-			
-
-				var cy = window.cy = cytoscape(
-				{
-					container: document.getElementById('cy'),
-					boxSelectionEnabled: false,
-					autounselectify: true,
-					layout:
-						{
-							name: 'dagre',
-							animate: true,
-							animationDuration: 1550,
-							rankDir: "TB",
-							avoidOverlap: true,
-							minLen: function(edge){return .5;},
-							edgeWeight: function(edge){return 1;}
-						},
-					style: [ // the stylesheet for the graph
+				if (!event.target.matches('.dropbtn')) 
+					{
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						var i;
+						for (i = 0; i < dropdowns.length; i++)
 							{
-								selector: 'node',
-								style: 
+								var openDropdown = dropdowns[i];
+								if (openDropdown.classList.contains('show')) 
 									{
-										'background-color': "#FFF",
-										'label': 'data(id)',
-										"font-size": ".75em"
-									}
-							},
-							{
-								selector: 'edge',
-								style: 
-									{
-										'width': 6,
-										'line-color': '#FFF',
-										'target-arrow-color': '#FFF',
-										'target-arrow-shape': 'triangle',
-										'curve-style': 'unbundled-bezier',
-										'control-point-distances': 0,
-										'control-point-weights': 0.1	
+										openDropdown.classList.remove('show');
 									}
 							}
-						],
-					elements: 
-						{ // list of graph elements to start with
-							//nodes: cs_algorithms
-							//edges: cs_algorithms_edges
-							
-							//nodes: cs_info
-							//edges: cs_info_edges
-							nodes: cs_lower_div_nodes,
-							edges: cs_lower_div_edges	 
-						},
-				
-					minZoom: .5,
-					maxZoom: 2.5,
-					autolock: true
-				});
-			});//closes the function tag
+				  }
+				  
+				else if (event.target.matches(".dropbtn"))
+					{
+						var outer = document.getElementsByClassName("dropdown-content");
+						container = outer[0];
+						container.onclick = function(event)
+						{
+							if(event.target.matches("#BIM"))
+							{
+								$(function()
+								{
+									var cy = window.cy = cytoscape(
+									{
+										container: document.getElementById('cy'),
+										boxSelectionEnabled: false,
+										autounselectify: true,
+										layout:
+											{
+												name: 'dagre',
+												animate: true,
+												animationDuration: 1550,
+												rankDir: "TB",
+												avoidOverlap: true,
+												minLen: function(edge){return .5;},
+												edgeWeight: function(edge){return 1;}
+											},
+										style: [ // the stylesheet for the graph
+												{
+													selector: 'node',
+													style: 
+														{
+															'background-color': "#FFF",
+															'label': 'data(id)',
+															"font-size": ".75em"
+														}
+												},
+												{
+													selector: 'edge',
+													style: 
+														{
+															'width': 6,
+															'line-color': '#FFF',
+															'target-arrow-color': '#FFF',
+															'target-arrow-shape': 'triangle',
+															'curve-style': 'unbundled-bezier',
+															'control-point-distances': 0,
+															'control-point-weights': 0.1	
+														}
+												}
+											],
+										elements: 
+											{ 
+												nodes: bim_nodes,
+												edges: bim_edges	 
+											},
+									
+										minZoom: .5,
+										maxZoom: 2.5,
+										autolock: true
+									});
+								});//closes the function tag
 			
+							}
+							else if(event.target.matches("#CGS"))
+							{
+								console.log("cgs was selected");
+							}
+							else if(event.target.matches("#CS"))
+							{
+									var cy = window.cy = cytoscape(
+									{
+										container: document.getElementById('cy'),
+										boxSelectionEnabled: false,
+										autounselectify: true,
+										layout:
+											{
+												name: 'dagre',
+												animate: true,
+												animationDuration: 1550,
+												rankDir: "TB",
+												avoidOverlap: true,
+												minLen: function(edge){return .5;},
+												edgeWeight: function(edge){return 1;}
+											},
+										style: [ // the stylesheet for the graph
+												{
+													selector: 'node',
+													style: 
+														{
+															'background-color': "#FFF",
+															'label': 'data(id)',
+															"font-size": ".75em"
+														}
+												},
+												{
+													selector: 'edge',
+													style: 
+														{
+															'width': 6,
+															'line-color': '#FFF',
+															'target-arrow-color': '#FFF',
+															'target-arrow-shape': 'triangle',
+															'curve-style': 'unbundled-bezier',
+															'control-point-distances': 0,
+															'control-point-weights': 0.1	
+														}
+												}
+											],
+										elements: 
+											{ 
+												nodes: cs_lower_div_nodes,
+												edges: cs_lower_div_edges
+											},
+									
+										minZoom: .5,
+										maxZoom: 2.5,
+										autolock: true
+									});
+			
+							}
+							else if(event.target.matches("#CSE"))
+							{
+								console.log("cse was selected");
+							}
+							else if(event.target.matches("#DS"))
+							{
+								console.log("ds was selected");
+							}
+							else if(event.target.matches("#in4mtx"))
+							{
+								console.log("informatics was selected");
+							}
+							else if(event.target.matches("#SE"))
+							{
+								console.log("se was selected");
+							}
+						}
+					}
+					
+			}
+		
+		</script>
+		<!--this script deals with querying the data the user wants to diplay-->
+
+		<script>
 			//corequisite courses are going to have to be designated by the same color
 			//scrape websoc to see which classes are offered every quarter
 			
