@@ -25,7 +25,6 @@
 		
 		<link rel="stylesheet" type="text/css" href="layout_file.css">
 
-		
 		<title>ZotFlow</title>	
 	
 	</head>
@@ -45,532 +44,8 @@
 			
 			window.onclick = function(event)
 			{
-				var bim_nodes = [
-								{
-									data: { id: "ICS 31"}
-								},
-								{
-									data: { id: "ICS 32"}
-								},
-								{
-									data: { id: "ICS 33"}
-								},
-								{
-									data: { id: "CS 122A"}
-								},
-								{
-									data: { id: "ICS 45J"}
-								},
-								{
-									data: { id: "IN4MATX 43"}
-								},
-								{
-									data: { id: "STATS 7"}
-								},
-								{
-									data: { id: "MGMT 30B"}
-								},
-								{
-									data: { id: "MGMT 101"}
-								},
-								{
-									data: { id: "MGMT 102"}
-								},
-								{
-									data: { id: "MGMT 105"}
-								},
-								{
-									data: { id: "MGMT 30A"}
-								},
-								{
-									data: { id: "MGMT 107"}
-								},
-								{
-									data: { id: "MGMT 173"}
-								},
-								{
-									data: { id: "MGMT 178"}
-								},
-								{
-									data: { id: "MGMT 189"}
-								},
-								{
-									data: { id: "CS 121"}
-								},
-								{
-									data: { id: "IN4MATX 113"}
-								},
-								{
-									data: { id: "IN4MATX 143"}
-								},	
-								{
-									data: { id: "STATS 110"}
-								},
-								{
-									data: { id: "MATH 2A"}
-								},
-								{
-									data: { id: "MATH 2B"}
-								},
-								{
-									data: { id: "MGMT 109"}
-								},
-								{
-									data: { id: "MGMT 110"}
-								},
-								{
-									data: { id: "ICS 6B"}
-								},
-								{
-									data: { id: "ICS 6D"}
-								},
-								{
-									data: { id: "ECON 20A"}
-								},
-								{
-									data: { id: "ECON 20B"}
-								},
-								{
-									data: { id: "ICS 6N"}
-								},
-							];
-
-
-				var bim_edges = [
-									{
-										data: { id: "link1", source: "ICS 31", target: "ICS 32"}
-									},
-									{
-										data: { id: "link3", source: "ICS 32", target: "ICS 33"}
-									},
-									{
-										data: { id: "link4", source: "ICS 32", target: "IN4MATX 43"}
-									},
-									{
-										data: { id: "link5", source: "ICS 33", target: "ICS 45J"}
-									},
-									{
-										data: { id: "link6", source: "ICS 33", target: "CS 122A"}
-									},
-									{
-										data: { id: "link7", source: "ICS 33", target: "IN4MATX 113"}
-									},
-									{
-										data: { id: "link8", source: "ICS 45J", target: "CS 121"}
-									},
-									{
-										data: { id: "link9", source: "STATS 7", target: "STATS 110"}
-									},
-									{
-										data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
-									},
-									{
-										data: { id: "link11", source: "MATH 2B", target: "MGMT 109"}
-									},
-									{
-										data: { id: "link12", source: "MGMT 30A", target: "MGMT 109"}
-									},
-									{
-										data: { id: "link13", source: "ICS 6B", target: "ICS 6D"}
-									},
-									{
-										data: { id: "link14", source: "ECON 20A", target: "ECON 20B"}
-									},
-									{
-										data: { id: "link15", source: "MGMT 30A", target: "MGMT 30B"}
-									},
-									{
-										data: { id: "link16", source: "STATS 7", target: "MGMT 101"}
-									},
-									{
-										data: { id: "link17", source: "MGMT 102", target: "MGMT 110"}
-									},
-									{
-										data: { id: "link18", source: "MGMT 105", target: "MGMT 110"}
-									},
-									{
-										data: { id: "link19", source: "MGMT 109", target: "MGMT 110"}
-									},
-									{
-										data: { id: "link20", source: "MGMT 107", target: "MGMT 173"}
-									},
-									{
-										data: { id: "link21", source: "MGMT 107", target: "MGMT 178"}
-									},
-									{
-										data: { id: "link22", source: "MGMT 101", target: "MGMT 189"}
-									},
-									{
-										data: { id: "link23", source: "IN4MATX 43", target: "IN4MATX 113"}
-									},
-									{
-										data: { id: "link24", source: "IN4MATX 43", target: "IN4MATX 143"}
-									},
-									{
-										data: { id: "link25", source: "ICS 31", target: "IN4MATX 143"}
-									},
-								];
-								
-var data_science_nodes = [
-
-					
-							{ 
-								data: { id: 'MATH 2A' }
-							},
-							{
-								data: { id: 'MATH 2B' }
-							},
-							{
-								data: { id: "MATH 2D"}
-							},
-							{
-								data: { id: "STATS 120A"}
-							},
-							{
-								data: { id: "STATS 120B"}
-							},
-							{
-								data: { id: "STATS 120C"}
-							},
-							{
-								data: { id: "STATS 115"}
-							},
-								
-							{
-								data: { id: "CS 178"}
-							},
-						
-							{
-								data: { id: "STATS 7"}
-							},
-							{
-								data: { id: "STATS 110"}
-							},
-							{
-								data: { id: "STATS 111"}
-							},		
-							{
-								data: { id: "STATS 112"}
-							},								
-							{
-								data: { id: "ICS 46"}
-							},
-							{
-								data: { id: "ICS 45C"}
-							},
-							{
-								data: { id: "ICS 33"}
-							},
-							{
-								data: { id: "ICS 32"}
-							},
-							{
-								data: { id: "IN4MATX 43"}
-							},
-							{
-								data: { id: 'ICS 31' }
-							},
-							{
-								data: { id: "STATS 68"}
-							},
-							
-								
-							{
-								data: { id: "CS 122A"}
-							},
-							
-							
-							{
-								data: { id: "IN4MATX 143"}
-							},						
-							
-														
-							{
-								data: { id: "ICS 6N"}
-							},	
-	
-
-										
-							
-							
-							{ 
-								data: { id: 'ICS 6B' }
-							},
-							{
-								data: { id: 'ICS 6D' }
-							},
-
-							{
-								data: { id: "ICS 51"}
-							},
-	
-
-	
-	
-							{
-								data: { id: "CS 161"}
-							},
-	
-
-
-
-
-							
-
-							
-							{
-								data: { id: "WRT 39A"}
-							},
-							{
-								data: { id: "WRT 39B"}
-							},
-							{
-								data: { id: "WRT 39C"}
-							},
-							{
-								data: { id: "ICS 139W"}
-							},							
-							{
-								data: { id: "ELECTIVES"}
-							},
-							
-							{
-								data: { id: "STATS 5"}
-							},	
-				
-							
-];
-
-
-var data_science_edges = [
-
-							{
-								data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
-							},
-							{
-								data: { id: "link2", source: "ICS 32", target: "ICS 33"}
-							},
-							{
-								data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
-							},
-							{
-								data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
-							},
-							{
-								data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
-							},
-							{
-								data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
-							},
-							{
-								data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
-							},
-							{
-								data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
-							},
-							{
-								data: { id: "link9", source: "ICS 6D", target: "CS 161"}
-							},
-							{
-								data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
-							},
-							{
-								data: { id: "link11", source: "MATH 2B", target: "CS 161"}
-							},
-							{
-								data: { id: "link12", source: "MATH 2B", target: "MATH 2D"}
-							},
-							{
-								data: { id: "link13", source: "STATS 7", target: "STATS 68"}
-							},
-							{
-								data: { id: "link14", source: "ICS 31", target: "STATS 68"}
-							},
-							
-							{
-								data: { id: "link15", source: "STATS 7", target: "STATS 110"}
-							},
-							{
-								data: { id: "link16", source: "STATS 110", target: "STATS 111"}
-							},
-							{
-								data: { id: "link17", source: "STATS 111", target: "STATS 112"}
-							},
-						
-							{
-								data: { id: "link18", source: "STATS 120C", target: "STATS 115"}
-							},
-							{
-								data: { id: "link19", source: "MATH 2D", target: "STATS 120A"}
-							},
-							{
-								data: { id: "link20", source: "STATS 120A", target: "STATS 120B"}
-							},
-							{
-								data: { id: "link21", source: "STATS 120B", target: "STATS 120C"}
-							},
-							{
-								data: { id: "link22", source: "ICS 6N", target: "STATS 120C"}
-							},	
-							
-							{
-								data: { id: "link23", source: "ICS 33", target: "CS 122A"}
-							},
-							
-							{
-								data: { id: "link24", source: "ICS 6D", target: "CS 178"}
-							},
-							{
-								data: { id: "link25", source: "ICS 6N", target: "CS 178"}
-							},
-							{
-								data: { id: "link26", source: "MATH 2B", target: "CS 178"}
-							},
-							{
-								data: { id: "link27", source: "STATS 7", target: "CS 178"}
-							},
-							
-							{
-								data: { id: "link28", source: "IN4MATX 43", target: "IN4MATX 143"}
-							},
-							{
-								data: { id: "link29", source: "ICS 31", target: "IN4MATX 143"}
-							},
-							
-							
-							//handles the writing requirement of data science
-							{
-								data: { id: "link30", source: "WRT 39A", target: "WRT 39B"}
-							},
-							{
-								data: { id: "link31", source: "WRT 39B", target: "WRT 39C"}
-							},
-							{
-								data: { id: "link32", source: "WRT 39C", target: "ICS 139W"}
-							},
-							{				
-								data: { id: "link33", source: "ICS 32", target: "IN4MATX 43"}
-							}
-
-						];
 
 		
-							
-			var cs_lower_div_nodes = [
-									{
-										data: { id: "ICS 139W"}
-									},
-									{
-										data: { id: 'ICS 31' }
-									},
-									{
-										data: { id: "ICS 32"}
-									},
-									{
-										data: { id: "ICS 33"}
-									},
-									{
-										data: { id: "ICS 45C"}
-									},
-									{
-										data: { id: "ICS 46"}
-									},
-									{ 
-										data: { id: 'ICS 6B' }
-									},
-									{
-										data: { id: 'ICS 6D' }
-									},
-									{
-										data: { id: "Math 2A"}
-									},
-									{
-										data: { id: "ICS 51"}
-									},
-									{
-										data: { id: "ICS 53 and ICS 53-L"}
-									},
-									{
-										data: { id: "CS 161"}
-									},
-									{
-										data: { id: "Math 2B"}
-									},
-									{
-										data: { id: "Wrt 39A"}
-									},
-									{
-										data: { id: "Wrt 39B"}
-									},
-									{
-										data: { id: "Wrt 39C"}
-									},
-									{
-										data: { id: "IN4MATX 43"}
-									},
-									{
-										data: { id: "ICS 6N"}
-									},
-									{
-										data: { id: "ICS 90"}
-									},
-									{
-										data: { id: "STATS 67"}
-									},
-								];
-			
-			var cs_lower_div_edges = [
-									{
-										data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
-									},
-									{
-										data: { id: "link2", source: "ICS 32", target: "ICS 33"}
-									},
-									{
-										data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
-									},
-									{
-										data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
-									},
-									{
-										data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
-									},
-									{
-										data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
-									},
-									{
-										data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
-									},
-									{
-										data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
-									},
-									{
-										data: { id: "link9", source: "ICS 6D", target: "CS 161"}
-									},
-									{
-										data: { id: "link10", source: "Math 2A", target: "Math 2B"}
-									},
-									{
-										data: { id: "link11", source: "Math 2B", target: "CS 161"}
-									},
-									{
-										data: { id: "link12", source: "ICS 51", target: "ICS 53 and ICS 53-L"}
-									},
-									{
-										data: { id: "link14", source: "Wrt 39A", target: "Wrt 39B"}
-									},
-									{
-										data: { id: "link15", source: "Wrt 39B", target: "Wrt 39C"}
-									},
-									{
-										data: { id: "link16", source: "Wrt 39C", target: "ICS 139W"}
-									},
-									{				
-										data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
-									},
-								];		
-		
-			
 			
 				if (!event.target.matches('.dropbtn')) 
 					{
@@ -585,7 +60,8 @@ var data_science_edges = [
 									}
 							}
 				  }
-				  
+				//handles lowering the dropdown menu
+				
 				else if (event.target.matches(".dropbtn"))
 					{
 						var outer = document.getElementsByClassName("dropdown-content");
@@ -594,6 +70,173 @@ var data_science_edges = [
 						{
 							if(event.target.matches("#BIM"))
 							{
+								var bim_nodes = [
+													{
+														data: { id: "ICS 31"}
+													},
+													{
+														data: { id: "ICS 32"}
+													},
+													{
+														data: { id: "ICS 33"}
+													},
+													{
+														data: { id: "CS 122A"}
+													},
+													{
+														data: { id: "ICS 45J"}
+													},
+													{
+														data: { id: "IN4MATX 43"}
+													},
+													{
+														data: { id: "STATS 7"}
+													},
+													{
+														data: { id: "MGMT 30B"}
+													},
+													{
+														data: { id: "MGMT 101"}
+													},
+													{
+														data: { id: "MGMT 102"}
+													},
+													{
+														data: { id: "MGMT 105"}
+													},
+													{
+														data: { id: "MGMT 30A"}
+													},
+													{
+														data: { id: "MGMT 107"}
+													},
+													{
+														data: { id: "MGMT 173"}
+													},
+													{
+														data: { id: "MGMT 178"}
+													},
+													{
+														data: { id: "MGMT 189"}
+													},
+													{
+														data: { id: "CS 121"}
+													},
+													{
+														data: { id: "IN4MATX 113"}
+													},
+													{
+														data: { id: "IN4MATX 143"}
+													},	
+													{
+														data: { id: "STATS 110"}
+													},
+													{
+														data: { id: "MATH 2A"}
+													},
+													{
+														data: { id: "MATH 2B"}
+													},
+													{
+														data: { id: "MGMT 109"}
+													},
+													{
+														data: { id: "MGMT 110"}
+													},
+													{
+														data: { id: "ICS 6B"}
+													},
+													{
+														data: { id: "ICS 6D"}
+													},
+													{
+														data: { id: "ECON 20A"}
+													},
+													{
+														data: { id: "ECON 20B"}
+													},
+													{
+														data: { id: "ICS 6N"}
+													},
+												];
+
+
+								var bim_edges = [
+													{
+														data: { id: "link1", source: "ICS 31", target: "ICS 32"}
+													},
+													{
+														data: { id: "link3", source: "ICS 32", target: "ICS 33"}
+													},
+													{
+														data: { id: "link4", source: "ICS 32", target: "IN4MATX 43"}
+													},
+													{
+														data: { id: "link5", source: "ICS 33", target: "ICS 45J"}
+													},
+													{
+														data: { id: "link6", source: "ICS 33", target: "CS 122A"}
+													},
+													{
+														data: { id: "link7", source: "ICS 33", target: "IN4MATX 113"}
+													},
+													{
+														data: { id: "link8", source: "ICS 45J", target: "CS 121"}
+													},
+													{
+														data: { id: "link9", source: "STATS 7", target: "STATS 110"}
+													},
+													{
+														data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
+													},
+													{
+														data: { id: "link11", source: "MATH 2B", target: "MGMT 109"}
+													},
+													{
+														data: { id: "link12", source: "MGMT 30A", target: "MGMT 109"}
+													},
+													{
+														data: { id: "link13", source: "ICS 6B", target: "ICS 6D"}
+													},
+													{
+														data: { id: "link14", source: "ECON 20A", target: "ECON 20B"}
+													},
+													{
+														data: { id: "link15", source: "MGMT 30A", target: "MGMT 30B"}
+													},
+													{
+														data: { id: "link16", source: "STATS 7", target: "MGMT 101"}
+													},
+													{
+														data: { id: "link17", source: "MGMT 102", target: "MGMT 110"}
+													},
+													{
+														data: { id: "link18", source: "MGMT 105", target: "MGMT 110"}
+													},
+													{
+														data: { id: "link19", source: "MGMT 109", target: "MGMT 110"}
+													},
+													{
+														data: { id: "link20", source: "MGMT 107", target: "MGMT 173"}
+													},
+													{
+														data: { id: "link21", source: "MGMT 107", target: "MGMT 178"}
+													},
+													{
+														data: { id: "link22", source: "MGMT 101", target: "MGMT 189"}
+													},
+													{
+														data: { id: "link23", source: "IN4MATX 43", target: "IN4MATX 113"}
+													},
+													{
+														data: { id: "link24", source: "IN4MATX 43", target: "IN4MATX 143"}
+													},
+													{
+														data: { id: "link25", source: "ICS 31", target: "IN4MATX 143"}
+													},
+												];
+												
+								
 								//if the Business and Information major is selected, render that particular graph
 								$(function()
 								{
@@ -646,17 +289,445 @@ var data_science_edges = [
 										maxZoom: 2.5,
 										autolock: true
 									});
-								});//closes the function tag
+								});
 			
+								document.getElementById("button").innerHTML = "Business Information Management";
 							}
 							else if(event.target.matches("#CGS"))
 							{
+								var cgs_nodes = [			
+													{
+														data: { id: "WRT 39A"}
+													},
+													{
+														data: { id: "WRT 39B"}
+													},
+													{
+														data: { id: "WRT 39C"}
+													},
+													{
+														data: { id: "ICS 139W"}
+													},
+													{ 
+														data: { id: 'ICS 6B' }
+													},
+													{
+														data: { id: 'ICS 6D' }
+													},
+													{
+														data: { id: "ICS 62"}
+													},
+													{
+														data: { id: "ICS 167"}
+													},
+													{
+														data: { id: "ICS 168"}
+													},
+													{
+														data: { id: 'ICS 31' }
+													},
+												
+													{
+														data: { id: "ICS 163"}
+													},
+													{
+														data: { id: "ICS 32"}
+													},
+													{
+														data: { id: "ICS 33"}
+													},
+													{
+														data: { id: "CS 112"}
+													},
+													{
+														data: { id: "ICS 45C"}
+													},
+													{
+														data: { id: "IN4MATX 43"}
+													},
+													{
+														data: { id: "ICS 60"}
+													},
+													{
+														data: { id: "ICS 61"}
+													},
+													{
+														data: { id: "ICS 51"}
+													},
+													{
+														data: { id: "PHYSICS 3A"}
+													},
+													{
+														data: { id: "FILM & MDA 85A"}
+													},
+													{
+														data: { id: "ICS 161"}
+													},
+													{
+														data: { id: "ICS 169A"}
+													},
+													{
+														data: { id: "ICS 169B"}
+													},
+													{
+														data: { id: "ICS 162"}
+													},
+													{
+														data: { id: "ICS 166"}
+													},
+													{
+														data: { id: "ICS 46"}
+													},
+													{
+														data: { id: "CS 171"}
+													},
+													{
+														data: { id: "MATH 2A"}
+													},
+													{
+														data: { id: "MATH 2B"}
+													},
+													{
+														data: { id: "STATS 67"}
+													},
+													{
+														data: { id: "ICS 6N"}
+													},				
+													{
+														data: { id: "2 COURSES FROM SECTION C ON CATALOG AND 5 ELECTIVES "}
+													}
+												];
+
+								var cgs_edges = [
+														{
+															data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
+														},
+														{
+															data: { id: "link2", source: "ICS 32", target: "ICS 33"}
+														},
+														{
+															data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
+														},
+														{
+															data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
+														},
+														{
+															data: { id: 'link5', source: 'ICS 6B', target: 'ICS 6D' }
+														},
+														{
+															data: { id: 'link6', source: 'ICS 6B', target: 'ICS 51' }
+														},
+														{
+															data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
+														},
+														{
+															data: { id: "link8", source: "ICS 32", target: "IN4MATX 43"}
+														},
+														{
+															data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
+														},
+														{
+															data: { id: "link9", source: "MATH 2B", target: "STATS 67"}
+														},
+														{
+															data: { id: "link11", source: "ICS 31", target: "ICS 62"}
+														},
+														{
+															data: { id : "link12", source: "ICS 45C", target: "ICS 161"}
+														},
+														{
+															data: { id: "link13", source: "ICS 45C", target: "CS 112"}
+														},
+														{
+															data: { id: "link14", source: "ICS 33", target: "CS 112"}
+														},
+														{
+															data: { id: "link15", source: "CS 112", target: "ICS 162"}
+														},
+														{
+															data: { id: "link16", source: "ICS 61", target: "ICS 163"}
+														},
+														{
+															data: { id: "link17", source: "ICS 31", target: "ICS 163"}
+														},
+														{
+															data: { id: "link18", source: "ICS 61", target: "ICS 161"}
+														},
+														{
+															data: { id: "link19", source: "IN4MATX 43", target: "ICS 166"}
+														},
+														{
+															data: { id: "link20", source: "ICS 46", target: "CS 171"}
+														},
+														{
+															data: { id: "link21", source: "MATH 2B", target: "CS 171"}
+														},
+														{
+															data: { id: "link22", source: "ICS 51", target: "ICS 167"}
+														},
+														{
+															data: { id: "link23", source: "IN4MATX 43", target: "ICS 168"}
+														},
+														{
+															data: { id: "link24", source: "ICS 167", target: "ICS 168"}
+														},
+														{
+															data: { id: "link25", source: "ICS 168", target: "ICS 169A"}
+														},
+														{
+															data: { id: "link26", source: "ICS 169A", target: "ICS 169B"}
+														},
+														{
+															data: { id: "link27", source: "WRT 39A", target: "WRT 39B"}
+														},
+														{
+															data: { id: "link28", source: "WRT 39B", target: "WRT 39C"}
+														},
+														{
+															data: { id: "link29", source: "WRT 39C", target: "ICS 139W"}
+														}
+												];
+
 								//if the computer game science major is selected, render that particular graph
-								console.log("cgs was selected");
+								$(function()
+								{
+									var cy = window.cy = cytoscape(
+									{
+										container: document.getElementById('cy'),
+										boxSelectionEnabled: false,
+										autounselectify: true,
+										layout:
+											{
+												name: 'dagre',
+												animate: true,
+												animationDuration: 1550,
+												rankDir: "TB",
+												avoidOverlap: true,
+												minLen: function(edge){return 1;},
+												edgeWeight: function(edge){return 1;}
+											},
+										style: [ // the stylesheet for the graph
+												{
+													selector: 'node',
+													style: 
+														{
+															'background-color': "#FFF",
+															'label': 'data(id)',
+															"font-size": ".75em"
+														}
+												},
+												{
+													selector: 'edge',
+													style: 
+														{
+															'width': 6,
+															'line-color': '#FFF',
+															'target-arrow-color': '#FFF',
+															'target-arrow-shape': 'triangle',
+															'curve-style': 'unbundled-bezier',
+															'control-point-distances': 0,
+															'control-point-weights': 0.1	
+														}
+												}
+											],
+										elements: 
+											{ 
+												nodes: cgs_nodes,
+												edges: cgs_edges	 
+											},
+									
+										minZoom: .5,
+										maxZoom: 2.5,
+										//autolock: true
+									});
+								});//closes the function tag
+			
+								document.getElementById("button").innerHTML = "Computer Game Science";
 							}
-							else if(event.target.matches("#CS algo"))
+							else if(event.target.matches("#CS_algo"))
 							{
-								//if the computer science major with a specialization in algorithms is selected, render that graph
+								var cs_algo_nodes = [
+															{
+																data: { id: "WRT 39A"}
+															},
+															{
+																data: { id: "WRT 39B"}
+															},
+															{
+																data: { id: "WRT 39C"}
+															},
+															{
+																data: { id: "ICS 139W"}
+															},
+															{
+																data: { id: "ICS 6N"}
+															},
+															{
+																data: { id: "MATH 2A"}
+															},
+															{
+																data: { id: "MATH 2B"}
+															},
+															{
+																data: { id: "STATS 67"}
+															},
+															
+															
+															{
+																data: { id: 'ICS 31' }
+															},
+															{
+																data: { id: "ICS 32"}
+															},
+															{
+																data: { id: "ICS 33"}
+															},
+															{
+																data: { id: "ICS 45C"}
+															},
+															{
+																data: { id: "ICS 46"}
+															},
+															{ 
+																data: { id: 'ICS 6B' }
+															},
+															{
+																data: { id: 'ICS 6D' }
+															},
+															{
+																data: { id: "ICS 51"}
+															},
+															{
+																data: { id: "ICS 53 and ICS 53-L"}
+															},
+															{
+																data: { id: "CS 161"}
+															},
+															
+															{
+																data: { id: "IN4MATX 43"}
+															},
+
+															{
+																data: { id: "ICS 90"}
+															},
+
+															
+															
+															//UPPER DIVISION COURSES
+															{
+																data: { id: "CS 162"}
+															},
+															{
+																data: { id: "CS 163"}
+															},
+															{
+																data: { id: "CS 164"}
+															},
+															{
+																data: { id: "CS 165"}
+															},														
+															{
+																data: { id: "CS 167"}
+															},
+															{
+																data: { id: "CS 169"}
+															},
+															
+															{
+																data: { id: "1 PROJECT COURSE"}
+															},
+															{
+																data: { id: "4 UPPER ELECTIVES"}
+															}
+														];
+			
+								var cs_algo_edges = [
+															{
+																data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
+															},
+															{
+																data: { id: "link2", source: "ICS 32", target: "ICS 33"}
+															},
+															{
+																data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
+															},
+															{
+																data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
+															},
+															{
+																data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
+															},
+															{
+																data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
+															},
+															{
+																data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
+															},
+															{
+																data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
+															},
+															{
+																data: { id: "link9", source: "ICS 6D", target: "CS 161"}
+															},
+															{
+																data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
+															},
+															{
+																data: { id: "link11", source: "MATH 2B", target: "CS 161"}
+															},
+															{
+																data: { id: "link12", source: "ICS 51", target: "ICS 53 and ICS 53-L"}
+															},
+															{
+																data: { id: "link14", source: "WRT 39A", target: "WRT 39B"}
+															},
+															{
+																data: { id: "link15", source: "WRT 39B", target: "WRT 39C"}
+															},
+															{
+																data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
+															},
+															{				
+																data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
+															},
+															{
+																data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
+															},
+															
+															
+															//UPPER DIVISION LINKS, SEQUENTIALLY
+															{
+																data: { id: "link19", source: "ICS 46", target: "CS 162"}
+															},
+															{
+																data: { id: "link20", source: "MATH 2B", target: "CS 162"}
+															},
+															{
+																data: { id: "link21", source: "ICS 6D", target: "CS 162"}
+															},
+															{
+																data: { id: "link22", source: "CS 161", target: "CS 163"}
+															},
+															{
+																data: { id: "link23", source: "ICS 46", target: "CS 164"}
+															},
+															{
+																data: { id: "link24", source: "CS 161", target: "CS 165"}
+															},
+															{
+																data: { id: "link25", source: "CS 161", target: "CS 167"}
+															},
+															{
+																data: { id: "link26", source: "STATS 67", target: "CS 169"}
+															},
+															{
+																data: { id: "link27", source: "ICS 6N", target: "CS 169"}
+															}
+														];		
+		
+								$(function()
+								{
 									var cy = window.cy = cytoscape(
 									{
 										container: document.getElementById('cy'),
@@ -698,52 +769,950 @@ var data_science_edges = [
 											],
 										elements: 
 											{ 
-												nodes: cs_lower_div_nodes,
-												edges: cs_lower_div_edges
+												nodes: cs_algo_nodes,
+												edges: cs_algo_edges	 
 											},
 									
 										minZoom: .5,
 										maxZoom: 2.5,
 										autolock: true
 									});
+								});
+		
+								
+								document.getElementById("button").innerHTML = "Comp Sci: Algorithms";
+							}
+							else if(event.target.matches("#CS_arch"))
+							{
+								var cs_arch_nodes = [
+														{
+															data: { id: "WRT 39A"}
+														},
+														{
+															data: { id: "WRT 39B"}
+														},
+														{
+															data: { id: "WRT 39C"}
+														},
+														{
+															data: { id: "ICS 139W"}
+														},
+														{
+															data: { id: "MATH 2A"}
+														},
+														{
+															data: { id: "MATH 2B"}
+														},
+														{
+															data: { id: "STATS 67"}
+														},
+														
+														
+														{
+															data: { id: 'ICS 31' }
+														},
+														{
+															data: { id: "ICS 32"}
+														},
+														{
+															data: { id: "IN4MATX 43"}
+														},
+														{
+															data: { id: "ICS 33"}
+														},
+														{
+															data: { id: "ICS 45C"}
+														},
+														{
+															data: { id: "ICS 46"}
+														},
+														{ 
+															data: { id: 'ICS 6B' }
+														},
+														{
+															data: { id: 'ICS 6D' }
+														},
+														{
+															data: { id: "ICS 51"}
+														},
+														{
+															data: { id: "ICS 53 and ICS 53-L"}
+														},
+														{
+															data: { id: "CS 161"}
+														},
+														
+
+
+														{
+															data: { id: "ICS 90"}
+														},
+														{
+															data: { id: "ICS 6N"}
+														},
+
+														
+														
+														//UPPER DIVISION COURSES
+														{
+															data: { id: "CS 144"}
+														},
+														{
+															data: { id: "CS 145 AND CS 145-L"}
+														},
+														{
+															data: { id: "CS 151"}
+														},
+														{
+															data: { id: "CS 152"}
+														},
+														{
+															data: { id: "CS 153"}
+														},
+														{
+															data: { id: "CS 154"}
+														},														
+														
+														{
+															data: { id: "5 UPPER ELECTIVES"}
+														},
+														
+														
+														{
+															data: { id: "RECOMMENDED ELECTIVES"}
+														}
+														
+													];
 			
+								var cs_arch_edges = [
+														{
+															data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
+														},
+														{
+															data: { id: "link2", source: "ICS 32", target: "ICS 33"}
+														},
+														{
+															data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
+														},
+														{
+															data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
+														},
+														{
+															data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
+														},
+														{
+															data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
+														},
+														{
+															data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
+														},
+														{
+															data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
+														},
+														{
+															data: { id: "link9", source: "ICS 6D", target: "CS 161"}
+														},
+														{
+															data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
+														},
+														{
+															data: { id: "link11", source: "MATH 2B", target: "CS 161"}
+														},
+														{
+															data: { id: "link12", source: "ICS 51", target: "ICS 53 and ICS 53-L"}
+														},
+														{
+															data: { id: "link14", source: "WRT 39A", target: "WRT 39B"}
+														},
+														{
+															data: { id: "link15", source: "WRT 39B", target: "WRT 39C"}
+														},
+														{
+															data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
+														},
+														{				
+															data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
+														},
+														{
+															data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
+														},
+														
+														
+														//UPPER DIVISION LINKS, SEQUENTIALLY
+														{
+															data: { id: "link19", source: "ICS 51", target: "CS 144"}
+														},
+														{
+															data: { id: "link20", source: "ICS 46", target: "CS 145 AND CS 145-L"}
+														},
+														{
+															data: { id: "link21", source: "ICS 51", target: "CS 145 AND CS 145-L"}
+														},
+														{
+															data: { id: "link22", source: "ICS 33", target: "CS 151"}
+														},
+														{
+															data: { id: "link23", source: "ICS 51", target: "CS 151"}
+														},
+														{
+															data: { id: "link24", source: "ICS 6D", target: "CS 151"}
+														},
+														{
+															data: { id: "link25", source: "CS 151", target: "CS 152"}
+														},
+														{
+															data: { id: "link26", source: "CS 151", target: "CS 153"}
+														},
+														{
+															data: { id: "link27", source: "CS 151", target: "CS 154"}
+														}
+														
+													];		
+		
+		
+								$(function()
+								{
+									var cy = window.cy = cytoscape(
+									{
+										container: document.getElementById('cy'),
+										boxSelectionEnabled: false,
+										autounselectify: true,
+										layout:
+											{
+												name: 'dagre',
+												animate: true,
+												animationDuration: 1550,
+												rankDir: "TB",
+												avoidOverlap: true,
+												minLen: function(edge){return .5;},
+												edgeWeight: function(edge){return 1;}
+											},
+										style: [ // the stylesheet for the graph
+												{
+													selector: 'node',
+													style: 
+														{
+															'background-color': "#FFF",
+															'label': 'data(id)',
+															"font-size": ".75em"
+														}
+												},
+												{
+													selector: 'edge',
+													style: 
+														{
+															'width': 6,
+															'line-color': '#FFF',
+															'target-arrow-color': '#FFF',
+															'target-arrow-shape': 'triangle',
+															'curve-style': 'unbundled-bezier',
+															'control-point-distances': 0,
+															'control-point-weights': 0.1	
+														}
+												}
+											],
+										elements: 
+											{ 
+												nodes: cs_arch_nodes,
+												edges: cs_arch_edges	 
+											},
+									
+										minZoom: .5,
+										maxZoom: 2.5,
+										autolock: true
+									});
+								});
+		
+								
+								document.getElementById("button").innerHTML = "Comp Sci: Architecture and Embedded Systems";
 							}
-							else if(event.target.matches("#CS arch"))
+							else if(event.target.matches("#CS_bio"))
 							{
+								var cs_bio_nodes = [
+														{
+															data: { id: "WRT 39A"}
+														},
+														{
+															data: { id: "WRT 39B"}
+														},
+														{
+															data: { id: "WRT 39C"}
+														},
+														{
+															data: { id: "ICS 139W"}
+														},
+														{
+															data: { id: "MATH 2A"}
+														},
+														{
+															data: { id: "MATH 2B"}
+														},
+														{
+															data: { id: "STATS 67"}
+														},
+														
+														
+														{
+															data: { id: 'ICS 31' }
+														},
+														{
+															data: { id: "ICS 32"}
+														},
+														{
+															data: { id: "IN4MATX 43"}
+														},
+														{
+															data: { id: "ICS 33"}
+														},
+														{
+															data: { id: "ICS 45C"}
+														},
+														{
+															data: { id: "ICS 46"}
+														},
+														{ 
+															data: { id: 'ICS 6B' }
+														},
+														{
+															data: { id: 'ICS 6D' }
+														},
+														{
+															data: { id: "ICS 51"}
+														},
+														{
+															data: { id: "ICS 53 and ICS 53-L"}
+														},
+														{
+															data: { id: "CS 161"}
+														},
+														
+														{
+															data: { id: "ICS 6N"}
+														},
+
+														
+														
+														//UPPER DIVISION COURSES
+														{
+															data: { id: "CS 184A"}
+														},
+														{
+															data: { id: "2 SPECIALIZATION COURSES"}
+														},
+														{
+															data: { id: "1 PROJECT COURSE"}
+														},
+														{
+															data: { id: "8 UPPER DIVISION"}
+														},
+														{
+															data: { id: "ICS 90"}
+														},
+														
+														
+														
+													];
+			
+								var cs_bio_edges = [
+														{
+															data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
+														},
+														{
+															data: { id: "link2", source: "ICS 32", target: "ICS 33"}
+														},
+														{
+															data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
+														},
+														{
+															data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
+														},
+														{
+															data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
+														},
+														{
+															data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
+														},
+														{
+															data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
+														},
+														{
+															data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
+														},
+														{
+															data: { id: "link9", source: "ICS 6D", target: "CS 161"}
+														},
+														{
+															data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
+														},
+														{
+															data: { id: "link11", source: "MATH 2B", target: "CS 161"}
+														},
+														{
+															data: { id: "link12", source: "ICS 51", target: "ICS 53 and ICS 53-L"}
+														},
+														{
+															data: { id: "link14", source: "WRT 39A", target: "WRT 39B"}
+														},
+														{
+															data: { id: "link15", source: "WRT 39B", target: "WRT 39C"}
+														},
+														{
+															data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
+														},
+														{				
+															data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
+														},
+														{
+															data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
+														},
+														
+														
+														//UPPER DIVISION LINKS, SEQUENTIALLY
+														{
+															data: { id: "link19", source: "ICS 6N", target: "CS 184A"}
+														}
+													];
+													
+								$(function()
+								{
+									var cy = window.cy = cytoscape(
+									{
+										container: document.getElementById('cy'),
+										boxSelectionEnabled: false,
+										autounselectify: true,
+										layout:
+											{
+												name: 'dagre',
+												animate: true,
+												animationDuration: 1550,
+												rankDir: "TB",
+												avoidOverlap: true,
+												minLen: function(edge){return .5;},
+												edgeWeight: function(edge){return 1;}
+											},
+										style: [ // the stylesheet for the graph
+												{
+													selector: 'node',
+													style: 
+														{
+															'background-color': "#FFF",
+															'label': 'data(id)',
+															"font-size": ".75em"
+														}
+												},
+												{
+													selector: 'edge',
+													style: 
+														{
+															'width': 6,
+															'line-color': '#FFF',
+															'target-arrow-color': '#FFF',
+															'target-arrow-shape': 'triangle',
+															'curve-style': 'unbundled-bezier',
+															'control-point-distances': 0,
+															'control-point-weights': 0.1	
+														}
+												}
+											],
+										elements: 
+											{ 
+												nodes: cs_bio_nodes,
+												edges: cs_bio_edges	 
+											},
+									
+										minZoom: .5,
+										maxZoom: 2.5,
+										autolock: true
+									});
+								});
+		
+						
+								document.getElementById("button").innerHTML = "Comp Sci: Bioinformatics";
+							}							
+							else if(event.target.matches("#CS_info"))
+							{
+								var cs_info_nodes = [
+														{
+															data: { id: "WRT 39A"}
+														},
+														{
+															data: { id: "WRT 39B"}
+														},
+														{
+															data: { id: "WRT 39C"}
+														},
+														{
+															data: { id: "ICS 139W"}
+														},
+														{
+															data: { id: "ICS 6N"}
+														},
+														
+														{
+															data: { id: "MATH 2A"}
+														},
+														{
+															data: { id: "MATH 2B"}
+														},
+														{
+															data: { id: "ICS 51"}
+														},
+														{
+															data: { id: "CS 161"}
+														},
+														{
+															data: { id: "STATS 67"}
+														},
+														
+														
+														{
+															data: { id: 'ICS 31' }
+														},
+														{
+															data: { id: "ICS 32"}
+														},
+														{
+															data: { id: "IN4MATX 43"}
+														},
+														{
+															data: { id: "ICS 33"}
+														},
+														{
+															data: { id: "ICS 45C"}
+														},
+														{
+															data: { id: "ICS 46"}
+														},
+														{ 
+															data: { id: 'ICS 6B' }
+														},
+														{
+															data: { id: 'ICS 6D' }
+														},
+														{
+															data: { id: "ICS 53 and ICS 53-L"}
+														},
+
+														
+														//UPPER DIVISION COURSES
+														{
+															data: { id: "CS 121"}
+														},
+														{
+															data: { id: "CS 122A"}
+														},
+														{
+															data: { id: "CS 178"}
+														},
+														
+														
+														{
+															data: { id: "CS 122B"}
+														},
+														{
+															data: { id: "CS 125"}
+														},
+														{
+															data: { id: "3 SPECIALIZATION COURSES"}
+														},
+														{
+															data: { id: "2 PROJECT COURSES"}
+														},
+														
+														{
+															data: { id: "ICS 45J"}
+														},
+														
+														{
+															data: { id: "ICS 90"}
+														},
+														
+
+														
+													];
+			
+								var cs_info_edges = [
+														{
+															data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
+														},
+														{
+															data: { id: "link2", source: "ICS 32", target: "ICS 33"}
+														},
+														{
+															data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
+														},
+														{
+															data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
+														},
+														{
+															data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
+														},
+														{
+															data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
+														},
+														{
+															data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
+														},
+														{
+															data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
+														},
+														{
+															data: { id: "link9", source: "ICS 6D", target: "CS 161"}
+														},
+														{
+															data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
+														},
+														{
+															data: { id: "link11", source: "MATH 2B", target: "CS 161"}
+														},
+														{
+															data: { id: "link12", source: "ICS 51", target: "ICS 53 and ICS 53-L"}
+														},
+														{
+															data: { id: "link14", source: "WRT 39A", target: "WRT 39B"}
+														},
+														{
+															data: { id: "link15", source: "WRT 39B", target: "WRT 39C"}
+														},
+														{
+															data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
+														},
+														{				
+															data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
+														},
+														{
+															data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
+														},
+														
+														
+														//UPPER DIVISION LINKS, SEQUENTIALLY
+														
+														{
+															data: { id: "link19", source: "STATS 67", target: "CS 121"}
+														},
+														{
+															data: { id: "link20", source: "ICS 46", target: "CS 121"}
+														},
+														{
+															data: { id: "link21", source: "ICS 33", target: "CS 122A"}
+														},
+														{
+															data: { id: "link22", source: "ICS 6D", target: "CS 178"}
+														},
+														{
+															data: { id: "link23", source: "ICS 6N", target: "CS 178"}
+														},
+														{
+															data: { id: "link24", source: "MATH 2B", target: "CS 178"}
+														},
+														{
+															data: { id: "link25", source: "STATS 67", target: "CS 178"}
+														},
+														{
+															data: { id: "link26", source: "CS 122A", target: "CS 122B"}
+														},
+														{
+															data: { id: "link27", source: "ICS 45J", target: "CS 122B"}
+														},
+														{
+															data: { id: "link28", source: "ICS 31", target: "CS 125"}
+														}					
+														
+														
+													];
+													
+													
+								$(function()
+								{
+									var cy = window.cy = cytoscape(
+									{
+										container: document.getElementById('cy'),
+										boxSelectionEnabled: false,
+										autounselectify: true,
+										layout:
+											{
+												name: 'dagre',
+												animate: true,
+												animationDuration: 1550,
+												rankDir: "TB",
+												avoidOverlap: true,
+												minLen: function(edge){return 1;},
+												edgeWeight: function(edge){return 1;}
+											},
+										style: [ // the stylesheet for the graph
+												{
+													selector: 'node',
+													style: 
+														{
+															'background-color': "#FFF",
+															'label': 'data(id)',
+															"font-size": ".75em"
+														}
+												},
+												{
+													selector: 'edge',
+													style: 
+														{
+															'width': 6,
+															'line-color': '#FFF',
+															'target-arrow-color': '#FFF',
+															'target-arrow-shape': 'triangle',
+															'curve-style': 'unbundled-bezier',
+															'control-point-distances': 0,
+															'control-point-weights': 0.1	
+														}
+												}
+											],
+										elements: 
+											{ 
+												nodes: cs_info_nodes,
+												edges: cs_info_edges	 
+											},
+									
+										minZoom: .5,
+										maxZoom: 2.5,
+										//autolock: true
+									});
+								});
 							
+								document.getElementById("button").innerHTML = "Comp Sci: Information";
+							}							
+							else if(event.target.matches("#CS_intel"))
+							{
+								document.getElementById("button").innerHTML = "Comp Sci: Intelligent Systems";
+							}							
+							else if(event.target.matches("#CS_network"))
+							{
+								document.getElementById("button").innerHTML = "Comp Sci: Networked Systems";
+							}							
+							else if(event.target.matches("#CS_sys"))
+							{
+								document.getElementById("button").innerHTML = "Comp Sci: Systems and Software";
 							}
-							else if(event.target.matches("#CS bio"))
+							else if(event.target.matches("#CS_vis"))
 							{
-							
-							}							
-							else if(event.target.matches("#CS info"))
-							{
-							
-							}							
-							else if(event.target.matches("#CS intel"))
-							{
-							
-							}							
-							else if(event.target.matches("#CS network"))
-							{
-							
-							}							
-							else if(event.target.matches("#CS sys"))
-							{
-							}
-							else if(event.target.matches("#CS vis"))
-							{
-							
+								document.getElementById("button").innerHTML = "Comp Sci: Visual Computing";
 							}
 							else if(event.target.matches("#CSE"))
 							{
 								//I'm not sure if we're going to handle this yet
-								console.log("cse was selected");
+								document.getElementById("button").innerHTML = "Comp Sci and Enginering";
 							}
 							else if(event.target.matches("#DS"))
-							{
+							{		
+								var data_science_nodes = [
+
+															{ 
+																data: { id: 'MATH 2A' }
+															},
+															{
+																data: { id: 'MATH 2B' }
+															},
+															{
+																data: { id: "MATH 2D"}
+															},
+															{
+																data: { id: "STATS 120A"}
+															},
+															{
+																data: { id: "STATS 120B"}
+															},
+															{
+																data: { id: "STATS 120C"}
+															},
+															{
+																data: { id: "STATS 115"}
+															},
+															{
+																data: { id: "CS 178"}
+															},
+															{
+																data: { id: "STATS 7"}
+															},
+															{
+																data: { id: "STATS 110"}
+															},
+															{
+																data: { id: "STATS 111"}
+															},		
+															{
+																data: { id: "STATS 112"}
+															},								
+															{
+																data: { id: "ICS 46"}
+															},
+															{
+																data: { id: "ICS 45C"}
+															},
+															{
+																data: { id: "ICS 33"}
+															},
+															{
+																data: { id: "ICS 32"}
+															},
+															{
+																data: { id: "IN4MATX 43"}
+															},
+															{
+																data: { id: 'ICS 31' }
+															},
+															{
+																data: { id: "STATS 68"}
+															},
+															{
+																data: { id: "CS 122A"}
+															},
+															{
+																data: { id: "IN4MATX 143"}
+															},							
+															{
+																data: { id: "ICS 6N"}
+															},	
+															{ 
+																data: { id: 'ICS 6B' }
+															},
+															{
+																data: { id: 'ICS 6D' }
+															},
+															{
+																data: { id: "ICS 51"}
+															},
+															{
+																data: { id: "CS 161"}
+															},
+															{
+																data: { id: "WRT 39A"}
+															},
+															{
+																data: { id: "WRT 39B"}
+															},
+															{
+																data: { id: "WRT 39C"}
+															},
+															{
+																data: { id: "ICS 139W"}
+															},							
+															{
+																data: { id: "ELECTIVES"}
+															},
+															{
+																data: { id: "STATS 5"}
+															}	
+														];
+
+								var data_science_edges = [
+
+															{
+																data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
+															},
+															{
+																data: { id: "link2", source: "ICS 32", target: "ICS 33"}
+															},
+															{
+																data: { id: "link3", source: "ICS 33", target: "ICS 45C"}
+															},
+															{
+																data: { id: "link4", source: "ICS 45C", target: "ICS 46"}
+															},
+															{
+																data: { id: 'link5', source: 'ICS 6B', target: 'ICS 51' }
+															},
+															{
+																data: { id: 'link6', source: 'ICS 6B', target: 'ICS 6D' }
+															},
+															{
+																data: { id: 'link7', source: 'ICS 31', target: 'ICS 51' }
+															},
+															{
+																data: { id: 'link8', source: 'ICS 46', target: 'CS 161' }
+															},
+															{
+																data: { id: "link9", source: "ICS 6D", target: "CS 161"}
+															},
+															{
+																data: { id: "link10", source: "MATH 2A", target: "MATH 2B"}
+															},
+															{
+																data: { id: "link11", source: "MATH 2B", target: "CS 161"}
+															},
+															{
+																data: { id: "link12", source: "MATH 2B", target: "MATH 2D"}
+															},
+															{
+																data: { id: "link13", source: "STATS 7", target: "STATS 68"}
+															},
+															{
+																data: { id: "link14", source: "ICS 31", target: "STATS 68"}
+															},
+															
+															{
+																data: { id: "link15", source: "STATS 7", target: "STATS 110"}
+															},
+															{
+																data: { id: "link16", source: "STATS 110", target: "STATS 111"}
+															},
+															{
+																data: { id: "link17", source: "STATS 111", target: "STATS 112"}
+															},
+														
+															{
+																data: { id: "link18", source: "STATS 120C", target: "STATS 115"}
+															},
+															{
+																data: { id: "link19", source: "MATH 2D", target: "STATS 120A"}
+															},
+															{
+																data: { id: "link20", source: "STATS 120A", target: "STATS 120B"}
+															},
+															{
+																data: { id: "link21", source: "STATS 120B", target: "STATS 120C"}
+															},
+															{
+																data: { id: "link22", source: "ICS 6N", target: "STATS 120C"}
+															},	
+															
+															{
+																data: { id: "link23", source: "ICS 33", target: "CS 122A"}
+															},
+															
+															{
+																data: { id: "link24", source: "ICS 6D", target: "CS 178"}
+															},
+															{
+																data: { id: "link25", source: "ICS 6N", target: "CS 178"}
+															},
+															{
+																data: { id: "link26", source: "MATH 2B", target: "CS 178"}
+															},
+															{
+																data: { id: "link27", source: "STATS 7", target: "CS 178"}
+															},
+															
+															{
+																data: { id: "link28", source: "IN4MATX 43", target: "IN4MATX 143"}
+															},
+															{
+																data: { id: "link29", source: "ICS 31", target: "IN4MATX 143"}
+															},
+															
+															
+															{
+																data: { id: "link30", source: "WRT 39A", target: "WRT 39B"}
+															},
+															{
+																data: { id: "link31", source: "WRT 39B", target: "WRT 39C"}
+															},
+															{
+																data: { id: "link32", source: "WRT 39C", target: "ICS 139W"}
+															},
+															{				
+																data: { id: "link33", source: "ICS 32", target: "IN4MATX 43"}
+															}
+														];
 								//if Data Science is selected, then render this particular graph
-								var cy = window.cy = cytoscape(
+								$(function()
+								{
+									var cy = window.cy = cytoscape(
 									{
 										container: document.getElementById('cy'),
 										boxSelectionEnabled: false,
@@ -785,23 +1754,26 @@ var data_science_edges = [
 										elements: 
 											{ 
 												nodes: data_science_nodes,
-												edges: data_science_edges 
+												edges: data_science_edges
 											},
 									
 										minZoom: .5,
 										maxZoom: 2.5,
 										autolock: true
 									});
+								});
+			
+								document.getElementById("button").innerHTML = "Data Science";
 							}
 							else if(event.target.matches("#in4mtx"))
 							{
 								//if informatics is rendered
-								console.log("informatics was selected");
+								document.getElementById("button").innerHTML = "Informatics";
 							}
 							else if(event.target.matches("#SE"))
 							{
 								//if software engineering is selected, then render that particular graph
-								console.log("se was selected");
+								document.getElementById("button").innerHTML = "Software Engineering";
 							}
 						}
 					}
@@ -814,19 +1786,21 @@ var data_science_edges = [
 		<div id="jumbotron">ZOTFLOW</div>
 		
 		<div class="dropdown">
-			<button onclick="myFunction()" class="dropbtn">Select Major</button>
+			<button onclick="myFunction()" id="button" class="dropbtn">Select Major</button>
 			<div id="myDropdown" class="dropdown-content">
 				<a id="BIM" href="#">Business Information Management</a>
 				<a id="CGS" href="#">Computer Game Science</a>
 				
-				<a id="CS algo" href="#">Comp Sci: Algorithms</a>
-				<a id="CS arch" href="#">Comp Sci: Architecture and Embedded Systems</a>
-				<a id="CS bio" href="#">Comp Sci: Bioinformatics</a>
-			    <a id="CS info" href="#">Comp Sci: Information</a>
-				<a id="CS intel" href="#">Comp Sci: Intelligent Systems</a>
-				<a id="CS network" href="#">Comp Sci: Networked Systems</a>
-				<a id="CS sys" href="#">Comp Sci: Systems and Software</a>
-				<a id="CS vis" href="#">Comp Sci: Visual Computing </a>
+				
+				<a id="CS_algo" href="#">Comp Sci: Algorithms</a>
+				<a id="CS_arch" href="#">Comp Sci: Architecture and Embedded Systems</a>
+				<a id="CS_bio" href="#">Comp Sci: Bioinformatics</a>
+			    <a id="CS_info" href="#">Comp Sci: Information</a>
+				<a id="CS_intel" href="#">Comp Sci: Intelligent Systems</a>
+				<a id="CS_network" href="#">Comp Sci: Networked Systems</a>
+				<a id="CS_sys" href="#">Comp Sci: Systems and Software</a>
+				<a id="CS_vis" href="#">Comp Sci: Visual Computing </a>
+				
 				
 				<a id="CSE" href="#">Computer Science and Engineering</a>
 				<a id="DS" href="#">Data Science</a>
@@ -838,7 +1812,7 @@ var data_science_edges = [
 		
 		<div id="cy"></div>
 		<!--We have to figure out how to place this div so that it's below the button but doesn't obstruct it-->
-		<p id="info">By Pablo Figueroa Kerry Cheng. Course offerings may be moved due to unforeseen circumstances. It is strongly recommended that students meet with an academic advisor to create an academic plan tailored to meet their specific areas of interest.</p>
+		<p id="info">By Pablo Figueroa, Kerry Cheng, and Jansen Yan. Course offerings may be moved due to unforeseen circumstances. It is strongly recommended that students meet with an academic advisor to create an academic plan tailored to meet their specific areas of interest.</p>
 	</body>
 
 </html>
