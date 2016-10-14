@@ -3,34 +3,34 @@
 <html>
 
 	<head>
-	
+
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-		
+
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
 
 		<script src="https://cdn.rawgit.com/cpettitt/dagre/v0.7.4/dist/dagre.js"></script>
 		<script src="WebCola/cola.js"></script>
-		
+
 		<script src="cytoscape-dagre\cytoscape-dagre.js"></script>
 		<script src="cytoscape-cola\cytoscape-cola.js"></script>
 		<!--change this to whatever directory you have this in-->
-		
-		
+
+
 		<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-		
+
 		<link rel="stylesheet" type="text/css" href="layout_file.css">
 
-		<title>ZotFlow</title>	
-	
+		<title>ZotFlow</title>
+
 	</head>
 
-		
-	
+
+
 	<body>
 		<script>
 			function myFunction()
@@ -40,28 +40,28 @@
 			//shows the list inside of the button if it is clicked
 
 			// Close the dropdown menu if the user clicks outside of it
-			
-			
+
+
 			window.onclick = function(event)
 			{
 
-		
-			
-				if (!event.target.matches('.dropbtn')) 
+
+
+				if (!event.target.matches('.dropbtn'))
 					{
 						var dropdowns = document.getElementsByClassName("dropdown-content");
 						var i;
 						for (i = 0; i < dropdowns.length; i++)
 							{
 								var openDropdown = dropdowns[i];
-								if (openDropdown.classList.contains('show')) 
+								if (openDropdown.classList.contains('show'))
 									{
 										openDropdown.classList.remove('show');
 									}
 							}
 				  }
 				//handles lowering the dropdown menu
-				
+
 				else if (event.target.matches(".dropbtn"))
 					{
 						var outer = document.getElementsByClassName("dropdown-content");
@@ -127,7 +127,7 @@
 													},
 													{
 														data: { id: "IN4MATX 143"}
-													},	
+													},
 													{
 														data: { id: "STATS 110"}
 													},
@@ -235,8 +235,8 @@
 														data: { id: "link25", source: "ICS 31", target: "IN4MATX 143"}
 													},
 												];
-												
-								
+
+
 								//if the Business and Information major is selected, render that particular graph
 								$(function()
 								{
@@ -258,7 +258,7 @@
 										style: [ // the stylesheet for the graph
 												{
 													selector: 'node',
-													style: 
+													style:
 														{
 															'background-color': "#FFF",
 															'label': 'data(id)',
@@ -267,7 +267,7 @@
 												},
 												{
 													selector: 'edge',
-													style: 
+													style:
 														{
 															'width': 6,
 															'line-color': '#FFF',
@@ -275,27 +275,27 @@
 															'target-arrow-shape': 'triangle',
 															'curve-style': 'unbundled-bezier',
 															'control-point-distances': 0,
-															'control-point-weights': 0.1	
+															'control-point-weights': 0.1
 														}
 												}
 											],
-										elements: 
-											{ 
+										elements:
+											{
 												nodes: bim_nodes,
-												edges: bim_edges	 
+												edges: bim_edges
 											},
-									
+
 										minZoom: .5,
 										maxZoom: 2.5,
 										autolock: true
 									});
 								});
-			
+
 								document.getElementById("button").innerHTML = "Business Information Management";
 							}
 							else if(event.target.matches("#CGS"))
 							{
-								var cgs_nodes = [			
+								var cgs_nodes = [
 													{
 														data: { id: "WRT 39A"}
 													},
@@ -308,7 +308,7 @@
 													{
 														data: { id: "ICS 139W"}
 													},
-													{ 
+													{
 														data: { id: 'ICS 6B' }
 													},
 													{
@@ -326,7 +326,7 @@
 													{
 														data: { id: 'ICS 31' }
 													},
-												
+
 													{
 														data: { id: "ICS 163"}
 													},
@@ -392,7 +392,7 @@
 													},
 													{
 														data: { id: "ICS 6N"}
-													},				
+													},
 													{
 														data: { id: "2 COURSES FROM SECTION C ON CATALOG AND 5 ELECTIVES "}
 													}
@@ -509,7 +509,7 @@
 										style: [ // the stylesheet for the graph
 												{
 													selector: 'node',
-													style: 
+													style:
 														{
 															'background-color': "#FFF",
 															'label': 'data(id)',
@@ -518,7 +518,7 @@
 												},
 												{
 													selector: 'edge',
-													style: 
+													style:
 														{
 															'width': 6,
 															'line-color': '#FFF',
@@ -526,22 +526,22 @@
 															'target-arrow-shape': 'triangle',
 															'curve-style': 'unbundled-bezier',
 															'control-point-distances': 0,
-															'control-point-weights': 0.1	
+															'control-point-weights': 0.1
 														}
 												}
 											],
-										elements: 
-											{ 
+										elements:
+											{
 												nodes: cgs_nodes,
-												edges: cgs_edges	 
+												edges: cgs_edges
 											},
-									
+
 										minZoom: .5,
 										maxZoom: 2.5,
 										//autolock: true
 									});
 								});//closes the function tag
-			
+
 								document.getElementById("button").innerHTML = "Computer Game Science";
 							}
 							else if(event.target.matches("#CS_algo"))
@@ -571,8 +571,8 @@
 															{
 																data: { id: "STATS 67"}
 															},
-															
-															
+
+
 															{
 																data: { id: 'ICS 31' }
 															},
@@ -588,7 +588,7 @@
 															{
 																data: { id: "ICS 46"}
 															},
-															{ 
+															{
 																data: { id: 'ICS 6B' }
 															},
 															{
@@ -603,7 +603,7 @@
 															{
 																data: { id: "CS 161"}
 															},
-															
+
 															{
 																data: { id: "IN4MATX 43"}
 															},
@@ -612,8 +612,8 @@
 																data: { id: "ICS 90"}
 															},
 
-															
-															
+
+
 															//UPPER DIVISION COURSES
 															{
 																data: { id: "CS 162"}
@@ -626,14 +626,14 @@
 															},
 															{
 																data: { id: "CS 165"}
-															},														
+															},
 															{
 																data: { id: "CS 167"}
 															},
 															{
 																data: { id: "CS 169"}
 															},
-															
+
 															{
 																data: { id: "1 PROJECT COURSE"}
 															},
@@ -641,7 +641,7 @@
 																data: { id: "4 UPPER ELECTIVES"}
 															}
 														];
-			
+
 								var cs_algo_edges = [
 															{
 																data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
@@ -688,14 +688,14 @@
 															{
 																data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
 															},
-															{				
+															{
 																data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
 															},
 															{
 																data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
 															},
-															
-															
+
+
 															//UPPER DIVISION LINKS, SEQUENTIALLY
 															{
 																data: { id: "link19", source: "ICS 46", target: "CS 162"}
@@ -724,8 +724,8 @@
 															{
 																data: { id: "link27", source: "ICS 6N", target: "CS 169"}
 															}
-														];		
-		
+														];
+
 								$(function()
 								{
 									var cy = window.cy = cytoscape(
@@ -746,7 +746,7 @@
 										style: [ // the stylesheet for the graph
 												{
 													selector: 'node',
-													style: 
+													style:
 														{
 															'background-color': "#FFF",
 															'label': 'data(id)',
@@ -755,7 +755,7 @@
 												},
 												{
 													selector: 'edge',
-													style: 
+													style:
 														{
 															'width': 6,
 															'line-color': '#FFF',
@@ -763,23 +763,23 @@
 															'target-arrow-shape': 'triangle',
 															'curve-style': 'unbundled-bezier',
 															'control-point-distances': 0,
-															'control-point-weights': 0.1	
+															'control-point-weights': 0.1
 														}
 												}
 											],
-										elements: 
-											{ 
+										elements:
+											{
 												nodes: cs_algo_nodes,
-												edges: cs_algo_edges	 
+												edges: cs_algo_edges
 											},
-									
+
 										minZoom: .5,
 										maxZoom: 2.5,
 										autolock: true
 									});
 								});
-		
-								
+
+
 								document.getElementById("button").innerHTML = "Comp Sci: Algorithms";
 							}
 							else if(event.target.matches("#CS_arch"))
@@ -806,8 +806,8 @@
 														{
 															data: { id: "STATS 67"}
 														},
-														
-														
+
+
 														{
 															data: { id: 'ICS 31' }
 														},
@@ -826,7 +826,7 @@
 														{
 															data: { id: "ICS 46"}
 														},
-														{ 
+														{
 															data: { id: 'ICS 6B' }
 														},
 														{
@@ -841,7 +841,7 @@
 														{
 															data: { id: "CS 161"}
 														},
-														
+
 
 
 														{
@@ -851,8 +851,8 @@
 															data: { id: "ICS 6N"}
 														},
 
-														
-														
+
+
 														//UPPER DIVISION COURSES
 														{
 															data: { id: "CS 144"}
@@ -871,19 +871,19 @@
 														},
 														{
 															data: { id: "CS 154"}
-														},														
-														
+														},
+
 														{
 															data: { id: "5 UPPER ELECTIVES"}
 														},
-														
-														
+
+
 														{
 															data: { id: "RECOMMENDED ELECTIVES"}
 														}
-														
+
 													];
-			
+
 								var cs_arch_edges = [
 														{
 															data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
@@ -930,14 +930,14 @@
 														{
 															data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
 														},
-														{				
+														{
 															data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
 														},
 														{
 															data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
 														},
-														
-														
+
+
 														//UPPER DIVISION LINKS, SEQUENTIALLY
 														{
 															data: { id: "link19", source: "ICS 51", target: "CS 144"}
@@ -966,10 +966,10 @@
 														{
 															data: { id: "link27", source: "CS 151", target: "CS 154"}
 														}
-														
-													];		
-		
-		
+
+													];
+
+
 								$(function()
 								{
 									var cy = window.cy = cytoscape(
@@ -990,7 +990,7 @@
 										style: [ // the stylesheet for the graph
 												{
 													selector: 'node',
-													style: 
+													style:
 														{
 															'background-color': "#FFF",
 															'label': 'data(id)',
@@ -999,7 +999,7 @@
 												},
 												{
 													selector: 'edge',
-													style: 
+													style:
 														{
 															'width': 6,
 															'line-color': '#FFF',
@@ -1007,23 +1007,23 @@
 															'target-arrow-shape': 'triangle',
 															'curve-style': 'unbundled-bezier',
 															'control-point-distances': 0,
-															'control-point-weights': 0.1	
+															'control-point-weights': 0.1
 														}
 												}
 											],
-										elements: 
-											{ 
+										elements:
+											{
 												nodes: cs_arch_nodes,
-												edges: cs_arch_edges	 
+												edges: cs_arch_edges
 											},
-									
+
 										minZoom: .5,
 										maxZoom: 2.5,
 										autolock: true
 									});
 								});
-		
-								
+
+
 								document.getElementById("button").innerHTML = "Comp Sci: Architecture and Embedded Systems";
 							}
 							else if(event.target.matches("#CS_bio"))
@@ -1050,8 +1050,8 @@
 														{
 															data: { id: "STATS 67"}
 														},
-														
-														
+
+
 														{
 															data: { id: 'ICS 31' }
 														},
@@ -1070,7 +1070,7 @@
 														{
 															data: { id: "ICS 46"}
 														},
-														{ 
+														{
 															data: { id: 'ICS 6B' }
 														},
 														{
@@ -1085,13 +1085,13 @@
 														{
 															data: { id: "CS 161"}
 														},
-														
+
 														{
 															data: { id: "ICS 6N"}
 														},
 
-														
-														
+
+
 														//UPPER DIVISION COURSES
 														{
 															data: { id: "CS 184A"}
@@ -1108,11 +1108,11 @@
 														{
 															data: { id: "ICS 90"}
 														},
-														
-														
-														
+
+
+
 													];
-			
+
 								var cs_bio_edges = [
 														{
 															data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
@@ -1159,20 +1159,20 @@
 														{
 															data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
 														},
-														{				
+														{
 															data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
 														},
 														{
 															data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
 														},
-														
-														
+
+
 														//UPPER DIVISION LINKS, SEQUENTIALLY
 														{
 															data: { id: "link19", source: "ICS 6N", target: "CS 184A"}
 														}
 													];
-													
+
 								$(function()
 								{
 									var cy = window.cy = cytoscape(
@@ -1193,7 +1193,7 @@
 										style: [ // the stylesheet for the graph
 												{
 													selector: 'node',
-													style: 
+													style:
 														{
 															'background-color': "#FFF",
 															'label': 'data(id)',
@@ -1202,7 +1202,7 @@
 												},
 												{
 													selector: 'edge',
-													style: 
+													style:
 														{
 															'width': 6,
 															'line-color': '#FFF',
@@ -1210,25 +1210,25 @@
 															'target-arrow-shape': 'triangle',
 															'curve-style': 'unbundled-bezier',
 															'control-point-distances': 0,
-															'control-point-weights': 0.1	
+															'control-point-weights': 0.1
 														}
 												}
 											],
-										elements: 
-											{ 
+										elements:
+											{
 												nodes: cs_bio_nodes,
-												edges: cs_bio_edges	 
+												edges: cs_bio_edges
 											},
-									
+
 										minZoom: .5,
 										maxZoom: 2.5,
 										autolock: true
 									});
 								});
-		
-						
+
+
 								document.getElementById("button").innerHTML = "Comp Sci: Bioinformatics";
-							}							
+							}
 							else if(event.target.matches("#CS_info"))
 							{
 								var cs_info_nodes = [
@@ -1247,7 +1247,7 @@
 														{
 															data: { id: "ICS 6N"}
 														},
-														
+
 														{
 															data: { id: "MATH 2A"}
 														},
@@ -1263,8 +1263,8 @@
 														{
 															data: { id: "STATS 67"}
 														},
-														
-														
+
+
 														{
 															data: { id: 'ICS 31' }
 														},
@@ -1283,7 +1283,7 @@
 														{
 															data: { id: "ICS 46"}
 														},
-														{ 
+														{
 															data: { id: 'ICS 6B' }
 														},
 														{
@@ -1293,7 +1293,7 @@
 															data: { id: "ICS 53 and ICS 53-L"}
 														},
 
-														
+
 														//UPPER DIVISION COURSES
 														{
 															data: { id: "CS 121"}
@@ -1304,8 +1304,8 @@
 														{
 															data: { id: "CS 178"}
 														},
-														
-														
+
+
 														{
 															data: { id: "CS 122B"}
 														},
@@ -1318,19 +1318,19 @@
 														{
 															data: { id: "2 PROJECT COURSES"}
 														},
-														
+
 														{
 															data: { id: "ICS 45J"}
 														},
-														
+
 														{
 															data: { id: "ICS 90"}
 														},
-														
-													
-														
+
+
+
 													];
-			
+
 								var cs_info_edges = [
 														{
 															data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
@@ -1377,16 +1377,16 @@
 														{
 															data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
 														},
-														{				
+														{
 															data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
 														},
 														{
 															data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
 														},
-														
-														
+
+
 														//UPPER DIVISION LINKS, SEQUENTIALLY
-														
+
 														{
 															data: { id: "link19", source: "STATS 67", target: "CS 121"}
 														},
@@ -1416,12 +1416,12 @@
 														},
 														{
 															data: { id: "link28", source: "ICS 31", target: "CS 125"}
-														}					
-														
-														
+														}
+
+
 													];
-													
-													
+
+
 								$(function()
 								{
 									var cy = window.cy = cytoscape(
@@ -1442,7 +1442,7 @@
 										style: [ // the stylesheet for the graph
 												{
 													selector: 'node',
-													style: 
+													style:
 														{
 															'background-color': "#FFF",
 															'label': 'data(id)',
@@ -1451,7 +1451,7 @@
 												},
 												{
 													selector: 'edge',
-													style: 
+													style:
 														{
 															'width': 6,
 															'line-color': '#FFF',
@@ -1459,27 +1459,27 @@
 															'target-arrow-shape': 'triangle',
 															'curve-style': 'unbundled-bezier',
 															'control-point-distances': 0,
-															'control-point-weights': 0.1	
+															'control-point-weights': 0.1
 														}
 												}
 											],
-										elements: 
-											{ 
+										elements:
+											{
 												nodes: cs_info_nodes,
-												edges: cs_info_edges	 
+												edges: cs_info_edges
 											},
-									
+
 										minZoom: .5,
 										maxZoom: 2.5,
 										//autolock: true
 									});
 								});
-							
+
 								document.getElementById("button").innerHTML = "Comp Sci: Information";
-							}							
+							}
 							else if(event.target.matches("#CS_intel"))
 							{
-							
+
 								var cs_intel_nodes = [
 														{
 															data: { id: "WRT 39A"}
@@ -1496,7 +1496,7 @@
 														{
 															data: { id: "ICS 6N"}
 														},
-														
+
 														{
 															data: { id: "MATH 2A"}
 														},
@@ -1512,8 +1512,8 @@
 														{
 															data: { id: "STATS 67"}
 														},
-														
-														
+
+
 														{
 															data: { id: 'ICS 31' }
 														},
@@ -1532,7 +1532,7 @@
 														{
 															data: { id: "ICS 46"}
 														},
-														{ 
+														{
 															data: { id: 'ICS 6B' }
 														},
 														{
@@ -1542,7 +1542,7 @@
 															data: { id: "ICS 53 and ICS 53-L"}
 														},
 
-														
+
 														//UPPER DIVISION COURSES
 														{
 															data: { id: "CS 171"}
@@ -1562,17 +1562,17 @@
 														{
 															data: { id: "1 FROM CS 116, 121, 125, 174, OR 184B"}
 														},
-														
-														
+
+
 														{
 															data: { id: "1 PROJECT COURSE"}
 														},
 														{
 															data: { id: "4 UPPER DIVISION"}
-														}										
-													
+														}
+
 													];
-			
+
 								var cs_intel_edges = [
 														{
 															data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
@@ -1619,32 +1619,32 @@
 														{
 															data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
 														},
-														{				
+														{
 															data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
 														},
 														{
 															data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
 														},
-														
-														
+
+
 														//UPPER DIVISION LINKS, SEQUENTIALLY
-														
+
 														{
 															data: { id: "link19", source: "ICS 46", target: "CS 171"}
 														},
 														{
 															data: { id: "link20", source: "MATH 2B", target: "CS 171"}
 														},
-														
-														
+
+
 														{
 															data: { id: "link21", source: "CS 171", target: "CS 175"}
 														},
 														{
 															data: { id: "link22", source: "CS 178", target: "CS 175"}
 														},
-														
-														
+
+
 														{
 															data: { id: "link23", source: "ICS 6D", target: "CS 178"}
 														},
@@ -1657,9 +1657,9 @@
 														{
 															data: { id: "link26", source: "STATS 67", target: "CS 178"}
 														}
-												
+
 													];
-													
+
 							$(function()
 								{
 									var cy = window.cy = cytoscape(
@@ -1680,7 +1680,7 @@
 										style: [ // the stylesheet for the graph
 												{
 													selector: 'node',
-													style: 
+													style:
 														{
 															'background-color': "#FFF",
 															'label': 'data(id)',
@@ -1689,7 +1689,7 @@
 												},
 												{
 													selector: 'edge',
-													style: 
+													style:
 														{
 															'width': 6,
 															'line-color': '#FFF',
@@ -1697,25 +1697,25 @@
 															'target-arrow-shape': 'triangle',
 															'curve-style': 'unbundled-bezier',
 															'control-point-distances': 0,
-															'control-point-weights': 0.1	
+															'control-point-weights': 0.1
 														}
 												}
 											],
-										elements: 
-											{ 
+										elements:
+											{
 												nodes: cs_intel_nodes,
-												edges: cs_intel_edges	 
+												edges: cs_intel_edges
 											},
-									
+
 										minZoom: .5,
 										maxZoom: 2.5,
 										autolock: true
 									});
 								});
-								
-								
+
+
 								document.getElementById("button").innerHTML = "Comp Sci: Intelligent Systems";
-							}							
+							}
 							else if(event.target.matches("#CS_network"))
 							{
 								var cs_network_nodes = [
@@ -1743,8 +1743,8 @@
 														{
 															data: { id: "STATS 67"}
 														},
-														
-														
+
+
 														{
 															data: { id: 'ICS 31' }
 														},
@@ -1760,7 +1760,7 @@
 														{
 															data: { id: "ICS 46"}
 														},
-														{ 
+														{
 															data: { id: 'ICS 6B' }
 														},
 														{
@@ -1775,7 +1775,7 @@
 														{
 															data: { id: "CS 161"}
 														},
-														
+
 														{
 															data: { id: "IN4MATX 43"}
 														},
@@ -1784,8 +1784,8 @@
 															data: { id: "ICS 90"}
 														},
 
-														
-														
+
+
 														//UPPER DIVISION COURSES
 														/*
 														{
@@ -1804,8 +1804,8 @@
 														{
 															data: { id: "CS 143A"}
 														},
-														
-														
+
+
 														{
 															data: { id: "1 PROJECT COURSE"}
 														},
@@ -1814,7 +1814,7 @@
 														},
 
 													];
-			
+
 								var cs_network_edges = [
 															{
 																data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
@@ -1861,15 +1861,15 @@
 															{
 																data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
 															},
-															{				
+															{
 																data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
 															},
 															{
 																data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
 															},
-															
-															
-															
+
+
+
 															//UPPER DIVISION ELECTIVES
 															/*
 															{
@@ -1898,7 +1898,7 @@
 																data: { id: "link25", source:"ICS 51", target: "CS 143A"}
 															}
 													];
-													
+
 								$(function()
 									{
 									var cy = window.cy = cytoscape(
@@ -1919,7 +1919,7 @@
 										style: [ // the stylesheet for the graph
 												{
 													selector: 'node',
-													style: 
+													style:
 														{
 															'background-color': "#FFF",
 															'label': 'data(id)',
@@ -1928,7 +1928,7 @@
 												},
 												{
 													selector: 'edge',
-													style: 
+													style:
 														{
 															'width': 6,
 															'line-color': '#FFF',
@@ -1936,25 +1936,25 @@
 															'target-arrow-shape': 'triangle',
 															'curve-style': 'unbundled-bezier',
 															'control-point-distances': 0,
-															'control-point-weights': 0.1	
+															'control-point-weights': 0.1
 														}
 												}
 											],
-										elements: 
-											{ 
+										elements:
+											{
 												nodes: cs_network_nodes,
-												edges: cs_network_edges	 
+												edges: cs_network_edges
 											},
-									
+
 										minZoom: .5,
 										maxZoom: 2.5,
 										autolock: true
 									});
 								});
-								
-							
+
+
 								document.getElementById("button").innerHTML = "Comp Sci: Networked Systems";
-							}							
+							}
 							else if(event.target.matches("#CS_sys"))
 							{
 								var cs_network_nodes = [
@@ -1982,8 +1982,8 @@
 														{
 															data: { id: "STATS 67"}
 														},
-														
-														
+
+
 														{
 															data: { id: 'ICS 31' }
 														},
@@ -1999,7 +1999,7 @@
 														{
 															data: { id: "ICS 46"}
 														},
-														{ 
+														{
 															data: { id: 'ICS 6B' }
 														},
 														{
@@ -2014,7 +2014,7 @@
 														{
 															data: { id: "CS 161"}
 														},
-														
+
 														{
 															data: { id: "IN4MATX 43"}
 														},
@@ -2023,8 +2023,8 @@
 															data: { id: "ICS 90"}
 														},
 
-														
-														
+
+
 														//UPPER DIVISION COURSES
 														/*
 														{
@@ -2033,7 +2033,7 @@
 														*/
 
 													];
-			
+
 								var cs_network_edges = [
 															{
 																data: { id: 'link1', source: 'ICS 31', target: 'ICS 32' }
@@ -2080,15 +2080,15 @@
 															{
 																data: { id: "link16", source: "WRT 39C", target: "ICS 139W"}
 															},
-															{				
+															{
 																data: { id: "link17", source: "ICS 32", target: "IN4MATX 43"}
 															},
 															{
 																data: { id: "link18", source: "MATH 2B", target: "STATS 67"}
 															},
-															
-															
-															
+
+
+
 															//UPPER DIVISION ELECTIVES
 															/*
 															{
@@ -2109,10 +2109,10 @@
 								document.getElementById("button").innerHTML = "Comp Sci and Enginering";
 							}
 							else if(event.target.matches("#DS"))
-							{		
+							{
 								var data_science_nodes = [
 
-															{ 
+															{
 																data: { id: 'MATH 2A' }
 															},
 															{
@@ -2144,10 +2144,10 @@
 															},
 															{
 																data: { id: "STATS 111"}
-															},		
+															},
 															{
 																data: { id: "STATS 112"}
-															},								
+															},
 															{
 																data: { id: "ICS 46"}
 															},
@@ -2174,11 +2174,11 @@
 															},
 															{
 																data: { id: "IN4MATX 143"}
-															},							
+															},
 															{
 																data: { id: "ICS 6N"}
-															},	
-															{ 
+															},
+															{
 																data: { id: 'ICS 6B' }
 															},
 															{
@@ -2201,13 +2201,13 @@
 															},
 															{
 																data: { id: "ICS 139W"}
-															},							
+															},
 															{
 																data: { id: "ELECTIVES"}
 															},
 															{
 																data: { id: "STATS 5"}
-															}	
+															}
 														];
 
 								var data_science_edges = [
@@ -2254,7 +2254,7 @@
 															{
 																data: { id: "link14", source: "ICS 31", target: "STATS 68"}
 															},
-															
+
 															{
 																data: { id: "link15", source: "STATS 7", target: "STATS 110"}
 															},
@@ -2264,7 +2264,7 @@
 															{
 																data: { id: "link17", source: "STATS 111", target: "STATS 112"}
 															},
-														
+
 															{
 																data: { id: "link18", source: "STATS 120C", target: "STATS 115"}
 															},
@@ -2279,12 +2279,12 @@
 															},
 															{
 																data: { id: "link22", source: "ICS 6N", target: "STATS 120C"}
-															},	
-															
+															},
+
 															{
 																data: { id: "link23", source: "ICS 33", target: "CS 122A"}
 															},
-															
+
 															{
 																data: { id: "link24", source: "ICS 6D", target: "CS 178"}
 															},
@@ -2297,15 +2297,15 @@
 															{
 																data: { id: "link27", source: "STATS 7", target: "CS 178"}
 															},
-															
+
 															{
 																data: { id: "link28", source: "IN4MATX 43", target: "IN4MATX 143"}
 															},
 															{
 																data: { id: "link29", source: "ICS 31", target: "IN4MATX 143"}
 															},
-															
-															
+
+
 															{
 																data: { id: "link30", source: "WRT 39A", target: "WRT 39B"}
 															},
@@ -2315,7 +2315,7 @@
 															{
 																data: { id: "link32", source: "WRT 39C", target: "ICS 139W"}
 															},
-															{				
+															{
 																data: { id: "link33", source: "ICS 32", target: "IN4MATX 43"}
 															}
 														];
@@ -2340,7 +2340,7 @@
 										style: [ // the stylesheet for the graph
 												{
 													selector: 'node',
-													style: 
+													style:
 														{
 															'background-color': "#FFF",
 															'label': 'data(id)',
@@ -2349,7 +2349,7 @@
 												},
 												{
 													selector: 'edge',
-													style: 
+													style:
 														{
 															'width': 8,
 															'line-color': '#FFF',
@@ -2357,22 +2357,22 @@
 															'target-arrow-shape': 'triangle',
 															'curve-style': 'unbundled-bezier',
 															'control-point-distances': 0,
-															'control-point-weights': 0.1	
+															'control-point-weights': 0.1
 														}
 												}
 											],
-										elements: 
-											{ 
+										elements:
+											{
 												nodes: data_science_nodes,
 												edges: data_science_edges
 											},
-									
+
 										minZoom: .5,
 										maxZoom: 2.5,
 										autolock: true
 									});
 								});
-			
+
 								document.getElementById("button").innerHTML = "Data Science";
 							}
 							else if(event.target.matches("#in4mtx"))
@@ -2388,20 +2388,20 @@
 						}
 					}
 			}
-		
+
 		</script>
 		<!--this script deals with querying the data the user wants to diplay-->
 
-		
-		<div id="jumbotron">ZOTFLOW</div>
-		
+
+		<div id="header">ZOTFLOW</div>
+
 		<div class="dropdown">
 			<button onclick="myFunction()" id="button" class="dropbtn">Select Major</button>
 			<div id="myDropdown" class="dropdown-content">
 				<a id="BIM" href="#">Business Information Management</a>
 				<a id="CGS" href="#">Computer Game Science</a>
-				
-				
+
+
 				<a id="CS_algo" href="#">Comp Sci: Algorithms</a>
 				<a id="CS_arch" href="#">Comp Sci: Architecture and Embedded Systems</a>
 				<a id="CS_bio" href="#">Comp Sci: Bioinformatics</a>
@@ -2410,19 +2410,23 @@
 				<a id="CS_network" href="#">Comp Sci: Networked Systems</a>
 				<a id="CS_sys" href="#">Comp Sci: Systems and Software</a>
 				<a id="CS_vis" href="#">Comp Sci: Visual Computing </a>
-				
-				
+
+
 				<a id="CSE" href="#">Computer Science and Engineering</a>
 				<a id="DS" href="#">Data Science</a>
 				<a id="in4mtx" href="#">Informatics</a>
 				<a id="SE" href="#">Software Engineering</a>
 			</div>
 		</div>
-		
-		
-		<div id="cy"></div>
-		<!--We have to figure out how to place this div so that it's below the button but doesn't obstruct it-->
-		<p id="info">By Pablo Figueroa, Kerry Cheng, and Jansen Yan. Course offerings may be moved due to unforeseen circumstances. It is strongly recommended that students meet with an academic advisor to create an academic plan tailored to meet their specific areas of interest.</p>
-	</body>
 
+		<div id="cy">
+		</div>
+
+		<p id="info">
+			Courses offered at the University of California, Irvine are subject to change at any time.
+			Students are encouraged to meet with their school counselors regularly to maintain an updated academic
+			plan tailored to their areas of interest.
+		</p>
+
+		</body>
 </html>

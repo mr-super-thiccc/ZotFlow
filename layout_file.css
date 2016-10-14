@@ -1,72 +1,72 @@
-
-body 
-{
+/* Default */
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+
+}
+
+/* Page Body */
+body {
   background-color: #3498db;
 }
 
-#jumbotron
-{
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 2em;
+/* ZotFlow Header */
+#header {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
 	text-align: center;
-	padding: 25px;
-	background-color: rgba(0, 0, 0, .15);
 	color: white;
-	font-size: 50px;
+	font-size: 30px;
 	font-family: "Rock Salt", serif;
-	/*Deals with the giant header on the top of the page*/
-	
-	border-bottom: 1px solid white;
-	
+  background-color: rgba(41, 128, 185,1.0);
+  z-index: 2;
 }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  margin: 0 auto;
+  top: 9.75%;
+  width: auto;
+  max-width: 50%;
+  left: 10%;
+  right: 10%;
+  z-index: 1;
+  text-align: center;
+}
+
 /* Dropdown Button */
-.dropbtn
-{
-	background-color: #1b6698;
+.dropbtn {
+	background-color: rgba(41, 128, 185,1.0);
 	color: white;
 	padding: 16px;
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
-	z-index: 10;
+  max-width: 50%;
+  border-top: 1px solid white;
+	z-index: 1;
 }
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus 
-{
+/* Button Color on Hover */
+.dropbtn:hover, .dropbtn:focus {
 	background-color: #175782;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown 
-{
-	margin-top: .25em;
-	margin-bottom: 4em;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 10;
-	
-	border-style: solid;
-	border-width: 1px;
-	border-color: white;
-}
-
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content 
-{
+.dropdown-content {
+  margin: 0 auto;
 	display: none;
-	position: absolute;
+	position: relative;
 	background-color: #f9f9f9;
 	min-width: 275px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  max-width: 50%;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a 
-{
+/* Dropdown Links */
+.dropdown-content a {
 	font-family: sans-serif, arial;
 	color: black;
 	padding: 12px 16px;
@@ -76,48 +76,41 @@ body
 	border-bottom: 1px solid #d9d9d9;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover 
-{
-	background-color:#1b6698;
+.dropdown-content a:hover {
+	background-color: #1b6698;
 	color: white;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show 
-{
-	display:block;
+/*
+note: need to fix display on hover
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+*/
+
+.show {
+	display: block;
 }
 
-
-#cy {
-	
-  position: absolute;
-  display: inline-block;
-  margin-top: 5em;
-  margin-right: 6%;
-  margin-bottom: 5em;
-  margin-left: 6%;
-  width: 88%;
-  height: 425px;
-  background: #52a7e0;
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
-}
-
-#info
-{
+#info {
 	position: relative;
-	top: 100%;
-	margin-top: 5em;
-	margin-right: 20px;
-	margin-bottom: 20px;
-	margin-left: 20px;
+  margin: 0 auto;
+  width: 70%;
+  top: 20%;
+  padding: 10px;
 	color: white;
 	font-family: Arial, Georgia, Helvetica, sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
-	border-top: 5px dashed white;
-	padding: 15 10 10 10;
+	border-style: dotted;
+}
+
+#cy {
+  position: relative;
+  margin: 0 auto;
+  top: 17%;
+  max-width: 95%;
+  min-height: 510px;
+  border: none;
 }
