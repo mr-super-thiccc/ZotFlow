@@ -65,7 +65,7 @@ class collectCourse:  # this class has a method that returns a dictionary with (
             # text.partition("Prerequisite")[1] returns the actual phrase "Prerequisite"
             # text.partition("Prerequisite")[2] returns the text ~after~ the phrase "Prerequisite"
 
-            # we're interersted in text.partition("Prerequisite")[2] because it lists out the prerequisites for a course
+            # we're interested in text.partition("Prerequisite")[2] because it lists out the prerequisites for a course
 
             # text.partition("Prerequisite")[2] returns something along the lines of:
             # """CSE 21 or I&C SCI 21 or I&C SCI H21. CSE 21 with a grade of C or better.
